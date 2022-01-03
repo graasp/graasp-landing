@@ -2,14 +2,22 @@ import React from 'react';
 import Helmet from 'react-helmet';
 
 const SEO_DATA = {
-  description: 'An absurd gatsby starter',
-  title: 'Absurd',
-  url: '',
-  author: 'ajayns',
-  keywords: ['gatsby', 'site', 'absurd'],
-  img: '',
-  twitterId: '@ajayns_',
-  facebookId: '',
+  description:
+    'Graasp is an ecosystem of tools for digital education. They allow teachers and students to communicate, collaborate, and build engaging learning experiences. ',
+  title: 'Graasp',
+  url: 'https://graasp.org',
+  author: 'Graasp',
+  keywords: [
+    'graasp',
+    'digital education',
+    'learning platform',
+    'open source',
+    'stem',
+    'switzerland',
+  ],
+  img: 'https://avatars3.githubusercontent.com/u/43075056',
+  twitterId: '@graasp',
+  facebookId: 'graasp',
 };
 
 const SEO = () => {
