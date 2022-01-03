@@ -175,6 +175,15 @@ const Footer = () => (
         <ListItem>
           <ListItemButton
             component="a"
+            href="https://graasp.eu/donate"
+            target="_blank"
+          >
+            <ListItemText primary="Donate" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem>
+          <ListItemButton
+            component="a"
             href="mailto:contact@graasp.org"
             target="_blank"
           >
