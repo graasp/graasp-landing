@@ -10,6 +10,7 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { Link } from 'gatsby';
+import { Divider } from '@mui/material';
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -29,17 +30,31 @@ const Navbar = () => {
             variant="h6"
             noWrap
             component="div"
-            sx={{ flexGrow: 1, mr: 2, display: { xs: 'none', md: 'flex' } }}
+            sx={{ flexGrow: 0, mr: 2, display: { xs: 'none', md: 'flex' } }}
           >
             <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
               Graasp
             </Link>
           </Typography>
 
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            <Button
+              key="about"
+              align="center"
+              onClick={handleCloseNavMenu}
+              href="https://association.graasp.org"
+              target="_blank"
+              sx={{ my: 2, mx: 1, display: 'block' }}
+              color="text"
+            >
+              About
+            </Button>
+          </Box>
+
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
-              aria-label="account of current user"
+              aria-label="menu"
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
@@ -75,16 +90,18 @@ const Navbar = () => {
                   Sign Up
                 </Button>
               </MenuItem>
+              <Divider />
+              <MenuItem key="about" onClick={handleCloseNavMenu}>
+                <Button
+                  href="https://association.graasp.org"
+                  target="_blank"
+                  variant="text"
+                >
+                  About
+                </Button>
+              </MenuItem>
             </Menu>
           </Box>
-          <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-          >
-            Graasp
-          </Typography>
 
           <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
             <Button

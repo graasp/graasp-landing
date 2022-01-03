@@ -25,6 +25,9 @@ const muiTheme = createTheme({
   },
   typography: {
     useNextVariants: true,
+    button: {
+      textTransform: 'none',
+    },
   },
 });
 
