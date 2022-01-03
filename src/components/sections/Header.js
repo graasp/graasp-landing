@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container } from '@components/global';
-import ExternalLink from '@common/ExternalLink';
 import { ReactComponent as GraaspLogo } from '@images/logos/graasp.svg';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
 
 const Header = () => (
   <HeaderWrapper>
@@ -10,15 +11,28 @@ const Header = () => (
       <Grid>
         <Art>{GraaspLogo()}</Art>
         <Text>
-          <h1>
+          <Typography variant="h3">
             Communicate, Collaborate, Build Engaging Learning Experiences
-          </h1>
-          <br />
-          <p>
-            <StyledExternalLink href="https://github.com/ajayns/gatsby-absurd">
-              Check out source &nbsp;&#x2794;
-            </StyledExternalLink>
-          </p>
+          </Typography>
+          <Typography variant="h5" sx={{ my: 2 }}>
+            Digital Education Platform
+          </Typography>
+          <Button
+            href="https://auth.graasp.org/signin"
+            variant="contained"
+            color="primary"
+            sx={{ my: 2, mx: 1 }}
+          >
+            Sign In
+          </Button>
+          <Button
+            href="https://auth.graasp.org/signin"
+            variant="contained"
+            color="action"
+            sx={{ my: 2, mx: 1 }}
+          >
+            Sign Up
+          </Button>
         </Text>
       </Grid>
     </Container>
@@ -26,22 +40,25 @@ const Header = () => (
 );
 
 const HeaderWrapper = styled.header`
-  padding-top: 96px;
+  padding-top: 204px;
+  padding-bottom: 180px;
 
-  @media (max-width: ${props => props.theme.screen.md}) {
+  @media (max-width: ${(props) => props.theme.screen.md}) {
     padding-top: 128px;
+    text-align: center;
   }
 `;
 
 const Art = styled.figure`
   width: 100%;
   margin: 0;
+  text-align: center;
 
   > div {
     width: 120%;
     margin-bottom: -4.5%;
 
-    @media (max-width: ${props => props.theme.screen.md}) {
+    @media (max-width: ${(props) => props.theme.screen.md}) {
       width: 100%;
     }
   }
@@ -53,31 +70,22 @@ const Grid = styled.div`
   align-items: center;
   grid-gap: 64px;
 
-  @media (max-width: ${props => props.theme.screen.md}) {
+  @media (max-width: ${(props) => props.theme.screen.md}) {
     grid-template-columns: 1fr;
     grid-gap: 80px;
 
     > ${Art} {
-      order: 2;
+      order: -1;
     }
   }
 `;
 
 const Text = styled.div`
-  color: ${props => props.theme.color.white.regular};
+  color: ${(props) => props.theme.color.white.regular};
   justify-self: center;
 
-  @media (max-width: ${props => props.theme.screen.md}) {
+  @media (max-width: ${(props) => props.theme.screen.md}) {
     justify-self: start;
-  }
-`;
-
-const StyledExternalLink = styled(ExternalLink)`
-  color: inherit;
-  text-decoration: none;
-
-  &:hover {
-    color: ${props => props.theme.color.black.regular};
   }
 `;
 

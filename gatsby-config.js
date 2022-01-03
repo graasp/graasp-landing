@@ -13,9 +13,12 @@ module.exports = {
       resolve: `gatsby-plugin-svgr`,
       options: {
         svgoConfig: {
-          plugins: {
-            removeViewBox: false,
-          },
+          plugins: [
+            {
+              name: 'removeViewBox',
+              active: false,
+            },
+          ],
         },
       },
     },
@@ -65,17 +68,6 @@ module.exports = {
           '@styles': path.resolve(__dirname, 'src/styles/'),
           '@static': path.resolve(__dirname, 'static/'),
         },
-      },
-    },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Lato`,
-            variants: [`400`, `700`],
-          },
-        ],
       },
     },
     {

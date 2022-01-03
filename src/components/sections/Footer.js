@@ -1,126 +1,214 @@
 import React from 'react';
-import styled from 'styled-components';
-import { StaticQuery, graphql } from 'gatsby';
-import Img from 'gatsby-image';
-
-import { Container } from '@components/global';
-import ExternalLink from '@common/ExternalLink';
-
-import GithubIcon from '@static/icons/github.svg';
-import InstagramIcon from '@static/icons/instagram.svg';
-import TwitterIcon from '@static/icons/twitter.svg';
-
-const SOCIAL = [
-  {
-    icon: GithubIcon,
-    link: 'https://github.com/ajayns/gatsby-absurd',
-  },
-  {
-    icon: InstagramIcon,
-    link: 'https://instagram.com/ajay_ns',
-  },
-  {
-    icon: TwitterIcon,
-    link: 'https://twitter.com/ajayns08',
-  },
-];
+import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
+import Typography from '@mui/material/Typography';
+import {
+  Facebook as FacebookIcon,
+  Twitter as TwitterIcon,
+  LinkedIn as LinkedInIcon,
+  GitHub as GitHubIcon,
+} from '@mui/icons-material';
+import {
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+} from '@mui/material';
+import Box from '@mui/material/Box';
+import { Link } from 'gatsby';
 
 const Footer = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        art_pot: file(
-          sourceInstanceName: { eq: "art" }
-          name: { eq: "customers_pot" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 960) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <React.Fragment>
-        <Art>
-          <Img
-            fluid={data.art_pot.childImageSharp.fluid}
-            style={{ width: 480, maxWidth: '100%', marginBottom: -16 }}
-          />
-        </Art>
-        <FooterWrapper>
-          <StyledContainer>
-            <Copyright>
-              <h2>Absurd</h2>
-              <span>
-                Illustrations by
-                {` `}
-                <ExternalLink href="https://twitter.com/diana_valeanu">
-                  @diana_valeanu
-                </ExternalLink>
-              </span>
-            </Copyright>
-            <SocialIcons>
-              {SOCIAL.map(({ icon, link }) => (
-                <ExternalLink key={link} href={link}>
-                  <img src={icon} alt="link" />
-                </ExternalLink>
-              ))}
-            </SocialIcons>
-          </StyledContainer>
-        </FooterWrapper>
-      </React.Fragment>
-    )}
-  />
+  <Grid
+    container
+    spacing={2}
+    sx={{ bgcolor: 'primary.main', color: 'text.main' }}
+    alignContent="center"
+    justifyContent="space-around"
+  >
+    <Grid item xs={12} align="center">
+      Get Started with a Free Account
+      <Button
+        href="https://auth.graasp.org/signup"
+        variant="contained"
+        color="action"
+        sx={{ my: 2, mx: 1 }}
+      >
+        Sign Up
+      </Button>
+    </Grid>
+    <Grid item xs={12} sm={4}>
+      <Typography variant="h6" align="center">
+        <strong>Partners</strong>
+      </Typography>
+      <List dense sx={{ px: 5 }}>
+        <ListItem>
+          <ListItemButton component="a" href="https://epfl.ch" target="_blank">
+            <ListItemText primary="EPFL" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem>
+          <ListItemButton
+            component="a"
+            href="https://edtech-collider.ch/"
+            target="_blank"
+          >
+            <ListItemText primary="Swiss EdTech Collider" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem>
+          <ListItemButton
+            component="a"
+            href="https://www.golabz.eu/"
+            target="_blank"
+          >
+            <ListItemText primary="Go-Lab" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem>
+          <ListItemButton
+            component="a"
+            href="https://nextlab.golabz.eu/"
+            target="_blank"
+          >
+            <ListItemText primary="Next-Lab" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem>
+          <ListItemButton
+            component="a"
+            href="https://go-ga.org/"
+            target="_blank"
+          >
+            <ListItemText primary="GO-GA" />
+          </ListItemButton>
+        </ListItem>
+      </List>
+    </Grid>
+    <Grid item xs={12} sm={4}>
+      <Typography variant="h6" align="center">
+        <strong>Social Media</strong>
+      </Typography>
+      <List dense sx={{ px: 5 }}>
+        <ListItem>
+          <ListItemButton
+            component="a"
+            href="https://www.facebook.com/graasp"
+            target="_blank"
+          >
+            <ListItemIcon>
+              <FacebookIcon sx={{ color: 'text.main' }} />
+            </ListItemIcon>
+            <ListItemText primary="Facebook" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem>
+          <ListItemButton
+            component="a"
+            href="https://twitter.com/graasp"
+            target="_blank"
+          >
+            <ListItemIcon>
+              <TwitterIcon sx={{ color: 'text.main' }} />
+            </ListItemIcon>
+            <ListItemText primary="Twitter" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem>
+          <ListItemButton
+            component="a"
+            href="https://www.linkedin.com/company/graasp"
+            target="_blank"
+          >
+            <ListItemIcon>
+              <LinkedInIcon sx={{ color: 'text.main' }} />
+            </ListItemIcon>
+            <ListItemText primary="LinkedIn" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem>
+          <ListItemButton
+            component="a"
+            href="https://github.com/graasp"
+            target="_blank"
+          >
+            <ListItemIcon>
+              <GitHubIcon sx={{ color: 'text.main' }} />
+            </ListItemIcon>
+            <ListItemText primary="GitHub" />
+          </ListItemButton>
+        </ListItem>
+      </List>
+    </Grid>
+    <Grid item xs={12} sm={4}>
+      <Typography variant="h6" align="center">
+        <strong>Support</strong>
+      </Typography>
+      <List dense sx={{ px: 5 }}>
+        <ListItem>
+          <ListItemButton
+            component="a"
+            href="https://cloud.graasp.eu/en/pages/5797891865089e56cd1f11a9"
+            target="_blank"
+          >
+            <ListItemText primary="Tutorials" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem>
+          <ListItemButton
+            component="a"
+            href="https://developers.graasp.eu/"
+            target="_blank"
+          >
+            <ListItemText primary="Developers" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem>
+          <ListItemButton
+            component="a"
+            href="https://portal.klewel.com/watch/webcast/swiss-edtech-collider-april-2017/talk/2/"
+            target="_blank"
+          >
+            <ListItemText primary="Pitch" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem>
+          <ListItemButton
+            component="a"
+            href="mailto:contact@graasp.org"
+            target="_blank"
+          >
+            <ListItemText primary="Contact" />
+          </ListItemButton>
+        </ListItem>
+      </List>
+    </Grid>
+    <Grid item xs={12} sm={4} align="center">
+      <Link to="/terms" style={{ textDecoration: 'none', color: 'inherit' }}>
+        Terms of Service
+      </Link>
+    </Grid>
+    <Grid item xs={12} sm={4} align="center">
+      <Link to="/privacy" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <Typography variant="p">Privacy Policy</Typography>
+      </Link>
+    </Grid>
+    <Grid item xs={12} sm={4} align="center">
+      <Link
+        to="/disclaimer"
+        style={{ textDecoration: 'none', color: 'inherit' }}
+      >
+        <Typography variant="p">Disclaimer</Typography>
+      </Link>
+    </Grid>
+    <Grid item xs={12} align="center">
+      <Box sx={{ my: 2 }}>
+        <Typography variant="p" align="center">
+          &copy; Graasp 2014 - {new Date().getFullYear()}
+        </Typography>
+      </Box>
+    </Grid>
+  </Grid>
 );
-
-const SocialIcons = styled.div`
-  display: flex;
-
-  img {
-    margin: 0 8px;
-    width: 24px;
-    height: 24px;
-  }
-
-  @media (max-width: ${props => props.theme.screen.sm}) {
-    margin-top: 40px;
-  }
-`;
-
-const FooterWrapper = styled.footer`
-  background-color: ${props => props.theme.color.primary};
-  padding: 32px 0;
-`;
-
-const Copyright = styled.div`
-  font-family: ${props => props.theme.font.secondary};
-  ${props => props.theme.font_size.small};
-  color: ${props => props.theme.color.black.regular};
-
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-`;
-
-const Art = styled.figure`
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  margin-top: 48px;
-`;
-
-const StyledContainer = styled(Container)`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  @media (max-width: ${props => props.theme.screen.sm}) {
-    flex-direction: column;
-    text-align: center;
-  }
-`;
 
 export default Footer;
