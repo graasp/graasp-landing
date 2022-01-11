@@ -10,24 +10,24 @@ import {
 } from '@mui/icons-material';
 import {
   List,
-  ListItem,
   ListItemButton,
   ListItemIcon,
   ListItemText,
 } from '@mui/material';
 import Box from '@mui/material/Box';
 import { Link } from 'gatsby';
+import FooterListItem from '../common/FooterListItem';
 
 const Footer = () => (
   <Grid
     container
-    spacing={2}
+    spacing={1}
     sx={{ bgcolor: 'primary.main', color: 'text.main' }}
     alignContent="center"
     justifyContent="space-around"
   >
     <Grid item xs={12} align="center">
-      Get Started with a Free Account
+      <Typography variant="p">Get Started with a Free Account</Typography>
       <Button
         href="https://auth.graasp.org/signup"
         variant="contained"
@@ -42,12 +42,12 @@ const Footer = () => (
         <strong>Partners</strong>
       </Typography>
       <List dense sx={{ px: 5 }}>
-        <ListItem>
+        <FooterListItem>
           <ListItemButton component="a" href="https://epfl.ch" target="_blank">
             <ListItemText primary="EPFL" />
           </ListItemButton>
-        </ListItem>
-        <ListItem>
+        </FooterListItem>
+        <FooterListItem>
           <ListItemButton
             component="a"
             href="https://edtech-collider.ch/"
@@ -55,8 +55,8 @@ const Footer = () => (
           >
             <ListItemText primary="Swiss EdTech Collider" />
           </ListItemButton>
-        </ListItem>
-        <ListItem>
+        </FooterListItem>
+        <FooterListItem>
           <ListItemButton
             component="a"
             href="https://www.golabz.eu/"
@@ -64,17 +64,35 @@ const Footer = () => (
           >
             <ListItemText primary="Go-Lab" />
           </ListItemButton>
-        </ListItem>
-        <ListItem>
+        </FooterListItem>
+        <FooterListItem>
           <ListItemButton
             component="a"
-            href="https://nextlab.golabz.eu/"
+            href="https://d-skills.ch/"
             target="_blank"
           >
-            <ListItemText primary="Next-Lab" />
+            <ListItemText primary="Swiss Digital Skills Academy" />
           </ListItemButton>
-        </ListItem>
-        <ListItem>
+        </FooterListItem>
+        <FooterListItem>
+          <ListItemButton
+            component="a"
+            href="https://www.ihub4schools.eu/"
+            target="_blank"
+          >
+            <ListItemText primary="iHub4Schools" />
+          </ListItemButton>
+        </FooterListItem>
+        <FooterListItem>
+          <ListItemButton
+            component="a"
+            href="https://belearn.swiss/en/"
+            target="_blank"
+          >
+            <ListItemText primary="BeLEARN" />
+          </ListItemButton>
+        </FooterListItem>
+        <FooterListItem>
           <ListItemButton
             component="a"
             href="https://go-ga.org/"
@@ -82,7 +100,7 @@ const Footer = () => (
           >
             <ListItemText primary="GO-GA" />
           </ListItemButton>
-        </ListItem>
+        </FooterListItem>
       </List>
     </Grid>
     <Grid item xs={12} sm={4}>
@@ -90,7 +108,7 @@ const Footer = () => (
         <strong>Social Media</strong>
       </Typography>
       <List dense sx={{ px: 5 }}>
-        <ListItem>
+        <FooterListItem>
           <ListItemButton
             component="a"
             href="https://www.facebook.com/graasp"
@@ -101,8 +119,8 @@ const Footer = () => (
             </ListItemIcon>
             <ListItemText primary="Facebook" />
           </ListItemButton>
-        </ListItem>
-        <ListItem>
+        </FooterListItem>
+        <FooterListItem>
           <ListItemButton
             component="a"
             href="https://twitter.com/graasp"
@@ -113,8 +131,8 @@ const Footer = () => (
             </ListItemIcon>
             <ListItemText primary="Twitter" />
           </ListItemButton>
-        </ListItem>
-        <ListItem>
+        </FooterListItem>
+        <FooterListItem>
           <ListItemButton
             component="a"
             href="https://www.linkedin.com/company/graasp"
@@ -125,8 +143,8 @@ const Footer = () => (
             </ListItemIcon>
             <ListItemText primary="LinkedIn" />
           </ListItemButton>
-        </ListItem>
-        <ListItem>
+        </FooterListItem>
+        <FooterListItem>
           <ListItemButton
             component="a"
             href="https://github.com/graasp"
@@ -137,7 +155,7 @@ const Footer = () => (
             </ListItemIcon>
             <ListItemText primary="GitHub" />
           </ListItemButton>
-        </ListItem>
+        </FooterListItem>
       </List>
     </Grid>
     <Grid item xs={12} sm={4}>
@@ -145,7 +163,7 @@ const Footer = () => (
         <strong>Support</strong>
       </Typography>
       <List dense sx={{ px: 5 }}>
-        <ListItem>
+        <FooterListItem>
           <ListItemButton
             component="a"
             href="https://cloud.graasp.eu/en/pages/5797891865089e56cd1f11a9"
@@ -153,8 +171,8 @@ const Footer = () => (
           >
             <ListItemText primary="Tutorials" />
           </ListItemButton>
-        </ListItem>
-        <ListItem>
+        </FooterListItem>
+        <FooterListItem>
           <ListItemButton
             component="a"
             href="https://developers.graasp.eu/"
@@ -162,8 +180,8 @@ const Footer = () => (
           >
             <ListItemText primary="Developers" />
           </ListItemButton>
-        </ListItem>
-        <ListItem>
+        </FooterListItem>
+        <FooterListItem>
           <ListItemButton
             component="a"
             href="https://portal.klewel.com/watch/webcast/swiss-edtech-collider-april-2017/talk/2/"
@@ -171,8 +189,8 @@ const Footer = () => (
           >
             <ListItemText primary="Pitch" />
           </ListItemButton>
-        </ListItem>
-        <ListItem>
+        </FooterListItem>
+        <FooterListItem>
           <ListItemButton
             component="a"
             href="https://graasp.eu/donate"
@@ -180,8 +198,8 @@ const Footer = () => (
           >
             <ListItemText primary="Donate" />
           </ListItemButton>
-        </ListItem>
-        <ListItem>
+        </FooterListItem>
+        <FooterListItem>
           <ListItemButton
             component="a"
             href="mailto:contact@graasp.org"
@@ -189,7 +207,7 @@ const Footer = () => (
           >
             <ListItemText primary="Contact" />
           </ListItemButton>
-        </ListItem>
+        </FooterListItem>
       </List>
     </Grid>
     <Grid item xs={12} sm={4} align="center">
