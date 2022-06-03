@@ -26,7 +26,7 @@ const Header = () => (
             Sign In
           </Button>
           <Button
-            href="https://auth.graasp.org/signin"
+            href="https://auth.graasp.org/signup"
             variant="contained"
             color="action"
             sx={{ my: 2, mx: 1 }}
