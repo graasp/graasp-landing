@@ -8,16 +8,15 @@ require('dotenv').config({
 
 module.exports = {
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-svgr`,
-    `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-plugin-react-svg',
       options: {
-        name: `team`,
-        path: `${__dirname}/src/images/team`,
+        rule: {
+          include: /images\/.*\.svg/,
+        },
       },
     },
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -25,6 +24,7 @@ module.exports = {
         path: `${__dirname}/src/images/art`,
       },
     },
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -42,7 +42,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`average`, `prata\:400,700`],
+        fonts: [`average`, `prata:400,700`],
       },
     },
     {
@@ -50,20 +50,12 @@ module.exports = {
       options: {
         alias: {
           '@components': path.resolve(__dirname, 'src/components'),
+          '@config': path.resolve(__dirname, 'src/config'),
           '@common': path.resolve(__dirname, 'src/components/common'),
           '@images': path.resolve(__dirname, 'src/images'),
           '@sections': path.resolve(__dirname, 'src/components/sections'),
           '@styles': path.resolve(__dirname, 'src/styles/'),
           '@static': path.resolve(__dirname, 'static/'),
-        },
-      },
-    },
-    {
-      resolve: `gatsby-plugin-gdpr-cookies`,
-      options: {
-        googleAnalytics: {
-          trackingId: process.env.GATSBY_GA_TRACKING_ID,
-          anonymize: true,
         },
       },
     },
