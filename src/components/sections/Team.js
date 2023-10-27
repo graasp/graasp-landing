@@ -66,7 +66,7 @@ const Team = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <Section id="team" accent="secondary">
         <Container style={{ position: 'relative' }}>
           <h1>The Team</h1>
@@ -106,16 +106,16 @@ const TeamGrid = styled.div`
   width: 60%;
   margin-top: 72px;
 
-  @media (max-width: ${props => props.theme.screen.lg}) {
+  @media (max-width: ${(props) => props.theme.screen.lg}) {
     justify-content: start;
   }
 
-  @media (max-width: ${props => props.theme.screen.md}) {
+  @media (max-width: ${(props) => props.theme.screen.md}) {
     width: 100%;
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   }
 
-  @media (max-width: ${props => props.theme.screen.xs}) {
+  @media (max-width: ${(props) => props.theme.screen.xs}) {
     grid-gap: 24px;
   }
 `;
@@ -127,11 +127,11 @@ const Art = styled.figure`
   top: 0;
   left: 70%;
 
-  @media (max-width: ${props => props.theme.screen.lg}) {
+  @media (max-width: ${(props) => props.theme.screen.lg}) {
     top: 20%;
   }
 
-  @media (max-width: ${props => props.theme.screen.md}) {
+  @media (max-width: ${(props) => props.theme.screen.md}) {
     display: none;
   }
 `;
@@ -143,19 +143,19 @@ const ArtMobile = styled.figure`
   margin-top: 64px;
   margin-bottom: -60%;
 
-  @media (max-width: ${props => props.theme.screen.md}) {
+  @media (max-width: ${(props) => props.theme.screen.md}) {
     display: block;
   }
 `;
 
 const Title = styled.p`
   margin-top: 16px;
-  color: ${props => props.theme.color.black.regular};
+  color: ${(props) => props.theme.color.black.regular};
 `;
 
 const Subtitle = styled.p`
-  ${props => props.theme.font_size.small};
-  color: ${props => props.theme.color.black.light};
+  ${(props) => props.theme.font_size.small};
+  color: ${(props) => props.theme.color.black.light};
 `;
 
 export default Team;
