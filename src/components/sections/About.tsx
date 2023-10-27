@@ -29,7 +29,7 @@ const About = () => (
           Access hundreds of resources covering a wide variety of subjects.
         </Typography>
       </Grid>
-      <Grid item sm={12} md={6} alignItems="center">
+      <Grid id="computer" item sm={12} md={6} alignItems="center">
         <Computer />
       </Grid>
     </Grid>

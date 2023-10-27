@@ -9,7 +9,9 @@ const Header = () => (
   <HeaderWrapper>
     <Container>
       <Grid>
-        <Art>{/* <GraaspLogo /> */}</Art>
+        <Art>
+          <GraaspLogo />
+        </Art>
         <Text>
           <Typography variant="h3">
             Communicate, Collaborate, Build Engaging Learning Experiences

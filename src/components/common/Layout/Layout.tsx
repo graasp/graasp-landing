@@ -8,6 +8,7 @@ import theme from '@styles/theme';
 import GlobalStyles from '@styles/GlobalStyles';
 import { hasAcceptedCookies } from '@graasp/sdk';
 import { GA_MEASUREMENT_ID, NODE_ENV } from '@config/env';
+import { CssBaseline } from '@mui/material';
 
 if (GA_MEASUREMENT_ID && hasAcceptedCookies() && NODE_ENV !== 'test') {
   ReactGA.initialize(GA_MEASUREMENT_ID);
@@ -38,16 +39,17 @@ const muiTheme = createTheme({
   },
 });
 
-const Layout = ({ children }: { children: JSX.Element }) => (
-  <ThemeProvider theme={muiTheme}>
-    <DeprecateThisThemeProvider theme={theme}>
+const Layout = ({ children }: { children: JSX.Element | JSX.Element[] }) => (
+  <DeprecateThisThemeProvider theme={theme}>
+    <ThemeProvider theme={muiTheme}>
+      {/* <CssBaseline /> */}
       <>
         <SEO />
         <GlobalStyles />
         {children}
       </>
-    </DeprecateThisThemeProvider>
-  </ThemeProvider>
+    </ThemeProvider>
+  </DeprecateThisThemeProvider>
 );
 
 export default Layout;
