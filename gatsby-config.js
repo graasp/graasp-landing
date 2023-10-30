@@ -7,6 +7,7 @@ require('dotenv').config({
 });
 
 module.exports = {
+  trailingSlash: 'always',
   plugins: [
     {
       resolve: 'gatsby-plugin-react-svg',

@@ -44,9 +44,10 @@ const Footer = () => (
       spacing={1}
       alignContent="center"
       justifyContent="space-around"
+      textAlign="center"
     >
       <Grid item xs={12} sm={4}>
-        <Typography variant="h6" align="center">
+        <Typography variant="h6">
           <strong>Partners</strong>
         </Typography>
         <List dense sx={{ px: 5 }}>
@@ -116,7 +117,7 @@ const Footer = () => (
         </List>
       </Grid>
       <Grid item xs={12} sm={4}>
-        <Typography variant="h6" align="center">
+        <Typography variant="h6">
           <strong>Social Media</strong>
         </Typography>
         <List dense sx={{ px: 5 }}>
@@ -171,14 +172,14 @@ const Footer = () => (
         </List>
       </Grid>
       <Grid item xs={12} sm={4}>
-        <Typography variant="h6" align="center">
+        <Typography variant="h6">
           <strong>Support</strong>
         </Typography>
         <List dense sx={{ px: 5 }}>
           <FooterListItem>
             <ListItemButton
               component="a"
-              href="https://cloud.graasp.eu/en/pages/5797891865089e56cd1f11a9"
+              href="https://player.graasp.org/9d80d81f-ec9d-4bfb-836a-1c6b125aef2f"
               target="_blank"
             >
               <ListItemText primary="Tutorials" />
@@ -187,7 +188,7 @@ const Footer = () => (
           <FooterListItem>
             <ListItemButton
               component="a"
-              href="https://graasp.githu.io/docs/"
+              href="https://graasp.github.io/docs/"
               target="_blank"
             >
               <ListItemText primary="Developers" />
@@ -202,7 +203,7 @@ const Footer = () => (
               <ListItemText primary="Pitch" />
             </ListItemButton>
           </FooterListItem>
-          <FooterListItem>
+          {/* <FooterListItem>
             <ListItemButton
               component="a"
               href="https://graasp.eu/donate"
@@ -210,7 +211,7 @@ const Footer = () => (
             >
               <ListItemText primary="Donate" />
             </ListItemButton>
-          </FooterListItem>
+          </FooterListItem> */}
           <FooterListItem>
             <ListItemButton
               component="a"
@@ -222,10 +223,11 @@ const Footer = () => (
           </FooterListItem>
         </List>
       </Grid>
-      <Grid item xs={12} sm={4} alignItems="center">
+      <Grid item xs={12} sm={4}>
         <Typography
           component={Link}
-          to="/terms"
+          margin="auto"
+          to="/terms/"
           color="primary.contrastText"
           variant="body1"
           sx={{ textDecoration: 'none' }}
@@ -233,10 +235,10 @@ const Footer = () => (
           Terms of Service
         </Typography>
       </Grid>
-      <Grid item xs={12} sm={4} alignItems="center">
+      <Grid item xs={12} sm={4}>
         <Typography
           component={Link}
-          to="/privacy"
+          to="/privacy/"
           color="primary.contrastText"
           variant="body1"
           sx={{ textDecoration: 'none' }}
@@ -244,17 +246,24 @@ const Footer = () => (
           Privacy Policy
         </Typography>
       </Grid>
-      <Grid item xs={12} sm={4} alignItems="center">
-        <Link
-          to="/disclaimer"
-          style={{ textDecoration: 'none', color: 'inherit' }}
+      <Grid item xs={12} sm={4}>
+        <Typography
+          component={Link}
+          to="/disclaimer/"
+          color="primary.contrastText"
+          variant="body1"
+          sx={{ textDecoration: 'none' }}
         >
-          <Typography variant="body1">Disclaimer</Typography>
-        </Link>
+          Disclaimer
+        </Typography>
       </Grid>
-      <Grid item xs={12} alignItems="center">
-        <Box sx={{ my: 2 }}>
-          <Typography variant="body1" align="center">
+      <Grid item xs={12}>
+        <Box my={2}>
+          <Typography
+            variant="body1"
+            align="center"
+            color="primary.contrastText"
+          >
             &copy; Graasp 2014 - {new Date().getFullYear()}
           </Typography>
         </Box>
