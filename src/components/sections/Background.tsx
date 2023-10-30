@@ -2,7 +2,7 @@ import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 
-const Background = ({ children }: {children: JSX.Element}) => (
+const Background = ({ children }: { children: JSX.Element }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -25,6 +25,5 @@ const Background = ({ children }: {children: JSX.Element}) => (
     )}
   />
 );
-
 
 export default Background;

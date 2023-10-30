@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-# yarn pretty-quick --staged && yarn lint # TODO: reconfigure
-yarn prettier --check "src/**/*.js" && yarn lint
+yarn check
