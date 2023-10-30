@@ -73,6 +73,9 @@ public
 # jetbrains
 .idea
 
+# VSCode
+.vscode
+
 # dotenv environment variables file
 .env*
 !.env.*.encrypted
