@@ -56,7 +56,7 @@ const UsedBy = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <Section id="brands" accent>
         <StyledContainer>
           <div>
@@ -91,7 +91,7 @@ const LogoGrid = styled.div`
     }
   }
 
-  @media (max-width: ${props => props.theme.screen.sm}) {
+  @media (max-width: ${(props) => props.theme.screen.sm}) {
     grid-template-columns: 1fr;
   }
 `;
@@ -101,7 +101,7 @@ const StyledContainer = styled(Container)`
   justify-content: flex-end;
   position: relative;
 
-  @media (max-width: ${props => props.theme.screen.md}) {
+  @media (max-width: ${(props) => props.theme.screen.md}) {
     justify-content: center;
   }
 `;
@@ -112,13 +112,13 @@ const Art = styled.figure`
   top: -12%;
   right: 50%;
 
-  @media (max-width: ${props => props.theme.screen.lg}) {
+  @media (max-width: ${(props) => props.theme.screen.lg}) {
     top: 0;
     right: 65%;
     width: 500px;
   }
 
-  @media (max-width: ${props => props.theme.screen.md}) {
+  @media (max-width: ${(props) => props.theme.screen.md}) {
     display: none;
   }
 `;

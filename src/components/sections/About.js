@@ -22,14 +22,15 @@ const About = () => (
           Build rich learning experiences with content from across the web.
         </Typography>
         <Typography variant="h6" sx={{ my: 2 }}>
-          Create engaging activities for your classroom, professional training event or tutoring session.
+          Create engaging activities for your classroom, professional training
+          event or tutoring session.
         </Typography>
         <Typography variant="h6" sx={{ my: 2 }}>
           Access hundreds of resources covering a wide variety of subjects.
         </Typography>
       </Grid>
-      <Grid item sm={12} md={6} align='center'>
-        <Computer style={{ maxWidth: '380px' }}/>
+      <Grid item sm={12} md={6} align="center">
+        <Computer style={{ maxWidth: '380px' }} />
       </Grid>
     </Grid>
     <Grid
@@ -39,8 +40,8 @@ const About = () => (
       alignItems="center"
       sx={{ p: 10, backgroundColor: '#e0e0e0' }}
     >
-      <Grid item sm={12} md={6} align='center'>
-        <Folders style={{ maxWidth: '380px' }}/>
+      <Grid item sm={12} md={6} align="center">
+        <Folders style={{ maxWidth: '380px' }} />
       </Grid>
       <Grid item sm={12} md={6}>
         <Typography variant="h4" sx={{ my: 2 }}>
@@ -75,11 +76,12 @@ const About = () => (
           Take part in both virtual and real-world events.
         </Typography>
         <Typography variant="h6" sx={{ my: 2 }}>
-          Connect with established communities of practice and personal interest groups.
+          Connect with established communities of practice and personal interest
+          groups.
         </Typography>
       </Grid>
       <Grid item sm={12} md={6} align="center">
-        <Network style={{ maxWidth: '380px' }}/>
+        <Network style={{ maxWidth: '380px' }} />
       </Grid>
     </Grid>
   </>
