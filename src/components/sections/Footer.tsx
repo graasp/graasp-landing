@@ -2,6 +2,7 @@ import React from 'react';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import Mastodon from '../../images/logos/mastodon.svg';
 import {
   Facebook as FacebookIcon,
   Twitter as TwitterIcon,
@@ -167,6 +168,19 @@ const Footer = () => (
                 <GitHubIcon sx={{ color: 'primary.contrastText' }} />
               </ListItemIcon>
               <ListItemText primary="GitHub" />
+            </ListItemButton>
+          </FooterListItem>
+          <FooterListItem>
+            <ListItemButton
+              rel="me"
+              component="a"
+              href="https://tooting.ch/@graasp"
+              target="_blank"
+            >
+              <ListItemIcon>
+                <Mastodon />
+              </ListItemIcon>
+              <ListItemText primary="Mastodon" />
             </ListItemButton>
           </FooterListItem>
         </List>
