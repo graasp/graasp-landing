@@ -1,0 +1,34 @@
+{
+  "meta.description": "Graasp, Learning Experience platform",
+
+  "splash.title": "Your all-in-one learning experience platform",
+  "splash.subtitle": "Build, explore, and share engaging educational resources",
+  "splash.learn-more": "Learn more",
+
+  "action.signUp": "Sign Up",
+  "action.signIn": "Sign In",
+
+  "intro.teaser": "Support your digital learning journey with our four core services",
+
+  "platform.library": "Discover and share Open Educational Resources in our",
+  "platform.builder": "Create your own learning activities with the",
+  "platform.player": "Engage your students in your activities with the",
+  "platform.analytics": "Gain valuable insights and explore dashboards with",
+
+  "nav.terms": "Terms of Service",
+  "nav.privacy-policy": "Privacy Policy",
+  "nav.disclaimer": "Disclaimer",
+
+  "footer.partners.title": "Partners",
+
+  "footer.social.title": "Social",
+
+  "footer.actionCall": "Get started with a free account",
+
+  "footer.support.title": "Support",
+  "footer.support.tutorials": "Tutorials",
+  "footer.support.tutorials.link": "https://player.graasp.org/9d80d81f-ec9d-4bfb-836a-1c6b125aef2f",
+  "footer.support.developers": "Developers",
+  "footer.support.pitch": "Pitch",
+  "footer.support.contact": "Contact"
+}

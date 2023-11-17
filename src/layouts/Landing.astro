@@ -1,0 +1,75 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SplashSection from "../components/SplashSection.astro";
+import Platform from "../components/Platform.astro";
+import { useTranslations, type UILanguages } from "../i18n/utils";
+import Icon from "astro-icon";
+import SignUp from "../components/SignUp.astro";
+type Props = {
+  lang: UILanguages;
+};
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<Layout title="Graasp" description={t("meta.description")} {lang}>
+  <main>
+    <SplashSection />
+    <hr />
+    <section class="p-5 md:p-20">
+      <div class="flex flex-col items-center gap-5">
+        <h3 class="text-2xl text-center">
+          {t("intro.teaser")}
+        </h3>
+        <div class="flex flex-row gap-5 w-full max-w-3xl">
+          <Icon name="builder-color" />
+          <Icon name="player-color" />
+          <Icon name="library-color" />
+          <Icon name="analytics-color" />
+        </div>
+      </div>
+    </section>
+    <hr />
+    <Platform iconName="builder-color" bgColor="bg-builder">
+      <div>
+        {t("platform.builder")}
+        <span class="font-bold text-builder">Builder</span>
+      </div>
+    </Platform>
+    <Platform iconName="player-color" bgColor="bg-player">
+      <div>
+        {t("platform.player")}
+        <span class="font-bold text-player">Player</span>
+      </div>
+    </Platform>
+    <Platform iconName="library-color" bgColor="bg-library">
+      <div class="flex flex-col gap-2">
+        <div>
+          {t("platform.library")}
+          <span class="font-bold text-library">Library</span>
+        </div>
+        <a
+          class="text-library hover:underline"
+          href="https://library.graasp.org">Explore now &rarr;</a
+        >
+      </div>
+    </Platform>
+    <Platform iconName="analytics-color" bgColor="bg-analytics">
+      <div>
+        {t("platform.analytics")}
+        <span class="font-bold text-analytics">Analytics</span>
+      </div>
+    </Platform>
+    <hr />
+    <div class="p-5 md:p-20 flex flex-col items-center gap-5 justify-center">
+      <p class="text-2xl">{t("footer.actionCall")}</p>
+      <SignUp size="big" />
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    @apply grow bg-blue-50 text-black;
+  }
+</style>

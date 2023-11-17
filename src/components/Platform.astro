@@ -1,0 +1,41 @@
+---
+import Icon from "astro-icon";
+
+interface Props {
+  iconName: string;
+  bgColor: string;
+}
+const { iconName, bgColor } = Astro.props;
+---
+
+<section
+  class:list={[
+    "px-8 py-10 bg-opacity-5  flex flex-row items-center justify-center gap-5",
+    bgColor,
+  ]}
+>
+  <Icon name={iconName} width={150} class="w-30" />
+  <div class="text-alternate flex flex-col text-2xl max-w-[400px]">
+    <slot />
+  </div>
+</section>
+
+<style>
+  p {
+    @apply text-xl;
+  }
+
+  /* used to make the alternating disposition */
+  section:nth-child(even) > svg {
+    order: 2;
+  }
+  section:nth-child(odd) > svg {
+    order: 1;
+  }
+  section:nth-child(even) > .text-alternate {
+    order: 1;
+  }
+  section:nth-child(odd) > .text-alternate {
+    order: 2;
+  }
+</style>
