@@ -1,5 +1,5 @@
 ---
-title: Conditions d'utilisation
+title: Terms
 layout: ../layouts/MDLayout.astro
 lang: en
 ---

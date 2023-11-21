@@ -1,5 +1,5 @@
 ---
-title: Politique de confidentialité
+title: Privacy Policy
 layout: ../layouts/MDLayout.astro
 lang: en
 ---

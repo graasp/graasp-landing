@@ -1,5 +1,5 @@
 ---
-title: Disclaimer
+title: Haftungsausschluss
 layout: ../../layouts/MDLayout.astro
 lang: de
 ---

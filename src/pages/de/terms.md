@@ -1,5 +1,5 @@
 ---
-title: Politique de confidentialité
+title: Nutzungsbedingungen
 layout: ../../layouts/MDLayout.astro
 lang: de
 ---
