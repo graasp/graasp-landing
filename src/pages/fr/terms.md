@@ -4,7 +4,6 @@ layout: ../../layouts/MDLayout.astro
 lang: fr
 ---
 
-
 # Conditions d'utilisation
 
 En utilisant la plateforme et les logiciels Graasp, vous:

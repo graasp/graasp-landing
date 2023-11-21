@@ -9,5 +9,5 @@ export default {
       },
     },
   ],
-  astroAllowShorthand: false,
+  astroAllowShorthand: true,
 };

@@ -4,7 +4,6 @@ layout: ../../layouts/MDLayout.astro
 lang: fr
 ---
 
-
 # Privacy Policy
 
 ## 1. Who we are and how to contact us
