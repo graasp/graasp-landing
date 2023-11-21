@@ -4,6 +4,6 @@ layout: ../../layouts/MDLayout.astro
 lang: de
 ---
 
-# 🚧 Page under construction
+# 🚧 Diese Seite wurde not nicht übersetzt 🌐
 
-[See english version](../../en/terms/)
+[Bitte sehen Sie sich die englische Version an](../../en/terms/)
