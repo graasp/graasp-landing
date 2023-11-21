@@ -1,6 +1,6 @@
 ---
 title: Disclaimer
-layout: ../../layouts/MDLayout.astro
+layout: ../layouts/MDLayout.astro
 lang: en
 ---
 

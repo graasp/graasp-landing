@@ -1,6 +1,6 @@
 ---
 title: Politique de confidentialité
-layout: ../../layouts/MDLayout.astro
+layout: ../layouts/MDLayout.astro
 lang: en
 ---
 
@@ -23,9 +23,9 @@ As user, you agree:
 3. that Graasp only acts as a data manager regarding the storage and use of your Uploaded Data. Graasp only provides storage spaces and central processing units;
 4. that you are aware of the technical and organizational security measures implemented in Graasp;
 5. that you will promptly notify Graasp about:
-    - any legally binding request for disclosure of the Personal data by a law enforcement authority unless otherwise prohibited;
-    - any accidental or unauthorized access to proprietary, Personal or Uploaded Data, if technical assistance is required.
-    - to deal promptly and properly with all inquiries relating to the processing of the Personal Data as requested by applicable laws.
+   - any legally binding request for disclosure of the Personal data by a law enforcement authority unless otherwise prohibited;
+   - any accidental or unauthorized access to proprietary, Personal or Uploaded Data, if technical assistance is required.
+   - to deal promptly and properly with all inquiries relating to the processing of the Personal Data as requested by applicable laws.
 
 ### 2.2 Obligations of Graasp
 
@@ -37,7 +37,7 @@ Graasp agrees and warrants to provide the services according to the Terms of Use
 4. that Graasp will not process Personal or Uploaded Data for Graasp‘s own commercial benefit or that of any third party;
 5. notify the users without undue delay of any suspected or actual data breach involving their Personal or Uploaded Data;
 6. to notify the user immediately if Graasp receives any complaint, request, or other communication concerning the processing of the Personal or Uploaded Data.
-7.to assist users with appropriate measures and by providing information for the fulfillment of your obligations under the applicable law.
+   7.to assist users with appropriate measures and by providing information for the fulfillment of your obligations under the applicable law.
 
 ## 3. How Graasp uses your Personal and Uploaded Data
 

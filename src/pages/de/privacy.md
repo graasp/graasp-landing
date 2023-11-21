@@ -6,4 +6,4 @@ lang: de
 
 # 🚧 Diese Seite wurde not nicht übersetzt 🌐
 
-[Bitte sehen Sie sich die englische Version an](../../en/privacy/)
+[Bitte sehen Sie sich die englische Version an](../../privacy/)
