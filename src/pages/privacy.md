@@ -29,7 +29,7 @@ As user, you agree:
 
 ### 2.2 Obligations of Graasp
 
-Graasp agrees and warrants to provide the services according to the Terms of Use. Graasp is acting as a data manager and warrants:
+Graasp agrees and warrants to provide the services according to the [Terms of Use](../terms). Graasp is acting as a data manager and warrants:
 
 1. that Graasp keeps detailed and updated records of all management activities carried out on the Personal and Uploaded Data;
 2. to guarantee the confidentiality of your Personal and Uploaded Data if they are configured as private;
@@ -37,7 +37,7 @@ Graasp agrees and warrants to provide the services according to the Terms of Use
 4. that Graasp will not process Personal or Uploaded Data for Graasp‘s own commercial benefit or that of any third party;
 5. notify the users without undue delay of any suspected or actual data breach involving their Personal or Uploaded Data;
 6. to notify the user immediately if Graasp receives any complaint, request, or other communication concerning the processing of the Personal or Uploaded Data.
-7.to assist users with appropriate measures and by providing information for the fulfillment of your obligations under the applicable law.
+7. to assist users with appropriate measures and by providing information for the fulfillment of your obligations under the applicable law.
 
 ## 3. How Graasp uses your Personal and Uploaded Data
 
@@ -96,7 +96,7 @@ In order to ensure the operational functioning of Graasp and to understand its u
 
 ### 4.4 Uploaded Data
 
-You can create content (“Uploaded Data”) which may include Personal Data (e.g. educational data, digital documents, etc). You have the control over this data, as explained in the Terms of Use. As mentioned in the Terms of Use, users can decide to make public the Uploaded Data. In this case, other users may use your Uploaded Data for their own purpose, and Graasp cannot be liable for their further-use. Graasp hereby declines all responsibility for the further-use of your Uploaded Data by third-parties.
+You can create content (“Uploaded Data”) which may include Personal Data (e.g. educational data, digital documents, etc). You have the control over this data, as explained in the [Terms of Use](../terms). As mentioned in the [Terms of Use](../terms), users can decide to make public the Uploaded Data. In this case, other users may use your Uploaded Data for their own purpose, and Graasp cannot be liable for their further-use. Graasp hereby declines all responsibility for the further-use of your Uploaded Data by third-parties.
 
 ## 5. Cookies
 
@@ -107,7 +107,7 @@ A cookie is a file containing an identifier (a string of letters and numbers) th
 - to enable you to access reserved or personal content on the Graasp platform
 - to improve our communication and services.
 
-Most web browsers automatically accept cookies but provide controls that allow you to block or delete them. Please refer to your browser’s privacy or help documentation to find instructions for blocking or deleting cookies. For examples: Edge, Safari, Chrome, Firefox
+Most web browsers automatically accept cookies but provide controls that allow you to block or delete them. Please refer to your browser’s privacy or help documentation to find instructions for blocking or deleting cookies. For examples: [Edge](https://support.microsoft.com/en-us/microsoft-edge/view-cookies-in-microsoft-edge-a7d95376-f2cd-8e4a-25dc-1de753474879), [Safari](https://support.apple.com/fr-ch/guide/safari/sfri11471/mac), [Chrome](https://support.google.com/chrome/answer/95647?hl=fr&hlrm=en), [Firefox](https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox)
 
 If you choose to refuse cookies, you may not have access to certain functionalities of Graasp, which we cannot be held responsible for. The identifier is then sent back to the server each time the browser requests a page from the server. Cookies or similar technologies can be useful in many ways to make your visit in Graasp simpler, more pleasant and more pertinent. Various types of cookies are present in Graasp:
 
@@ -117,7 +117,7 @@ If you choose to refuse cookies, you may not have access to certain functionalit
 
 ## 6. How Graasp retain your data
 
-Graasp stores your Personal and Uploaded Data as long as your account exists. In order to fulfill our legal obligations or to fulfill our purpose described in section 4.3, the Operational Data may be anonymized and/or may be kept for a longer period.
+Graasp stores your Personal and Uploaded Data as long as your account exists. In order to fulfill our legal obligations or to fulfill our purpose described in [Section 4.3](#43-operational-data), the Operational Data may be anonymized and/or may be kept for a longer period.
 
 Your Personal Data is stored on secure servers at our Service Provider’s premises in continental Europe (Germany and Switzerland).
 
@@ -132,7 +132,7 @@ Graasp is sharing your Personal Data with the following recipients exclusively:
 
 ### 8.1 Amazon Web Services (Main service provider)
 
-Graasp uses the services of AWS (Amazon Web Services). No international transfers are foreseen, but their privacy framework can be consulted here.
+Graasp uses the services of AWS (Amazon Web Services). No international transfers are foreseen, but their privacy framework can be consulted [here](https://aws.amazon.com/privacy/).
 
 ### 8.2 Other service providers
 
