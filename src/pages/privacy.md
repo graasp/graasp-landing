@@ -37,7 +37,7 @@ Graasp agrees and warrants to provide the services according to the Terms of Use
 4. that Graasp will not process Personal or Uploaded Data for Graasp‘s own commercial benefit or that of any third party;
 5. notify the users without undue delay of any suspected or actual data breach involving their Personal or Uploaded Data;
 6. to notify the user immediately if Graasp receives any complaint, request, or other communication concerning the processing of the Personal or Uploaded Data.
-   7.to assist users with appropriate measures and by providing information for the fulfillment of your obligations under the applicable law.
+7.to assist users with appropriate measures and by providing information for the fulfillment of your obligations under the applicable law.
 
 ## 3. How Graasp uses your Personal and Uploaded Data
 
@@ -51,11 +51,11 @@ Graasp processes your Meta-data (see [Section 4.2](#42-meta-data)) to provide th
 
 ### 3.3 Ensure the functionalities and understand the use of Graasp
 
-Graasp processes Operational Data (see section 4.3) for the purpose of analyzing the use of Graasp, but also to ensure the functionalities of Graasp and the comfort of use. The legal basis for the Operational Data processing is the contract between users and Graasp as stated in the Terms of Use.
+Graasp processes Operational Data (see [Section 4.3](#43-operational-data)) for the purpose of analyzing the use of Graasp, but also to ensure the functionalities of Graasp and the comfort of use. The legal basis for the Operational Data processing is the contract between users and Graasp as stated in the Terms of Use.
 
 ### 3.4 Compliance with the law
 
-Graasp may process Personal and Uploaded Data, in case of suspected or actual criminal or administrative proceedings led by competent authorities (see section 4.4). The legal basis for this processing is necessary to carry out a legal obligation.
+Graasp may process Personal and Uploaded Data, in case of suspected or actual criminal or administrative proceedings led by competent authorities (see [Section 4.4](#44-uploaded-data)). The legal basis for this processing is necessary to carry out a legal obligation.
 
 ### 3.5 Research purposes
 
@@ -68,14 +68,15 @@ Graasp may collect all the following Personal data (referred to as the « Person
 ### 4.1 Account Data
 
 In order to manage the account of a user, Graasp needs to process the following Personal Data (« Account Data »):
-email address
-full name
-User ID
-password
-Other log information
-IP address
-timestamps of access to Graasp
-logs of consents
+
+- email address
+- full name
+- User ID
+- password
+- Other log information
+- IP address
+- timestamps of access to Graasp
+- logs of consents
 
 ### 4.2 Meta-data
 
@@ -84,13 +85,14 @@ In order to provide Graasp services, the information that is collected from your
 ### 4.3 Operational Data
 
 In order to ensure the operational functioning of Graasp and to understand its use, Graasp needs to process the following Personal Data (« Operational Data »):
-User IP addresses
-User ID
-Telemetry data, i.e. system data, used to get a pulse of the system, how hardware resources are used, by whom and understand why things fail, so that the Graasp team can troubleshoot them, or provide user support
-Logs from the firewall service
-Other logs required to ensure the functionalities of Graasp
-The number and duration of your visits
-Information about what parts of Graasp you visited
+
+- User IP addresses
+- User ID
+- Telemetry data, i.e. system data, used to get a pulse of the system, how hardware resources are used, by whom and understand why things fail, so that the Graasp team can troubleshoot them, or provide user support
+- Logs from the firewall service
+- Other logs required to ensure the functionalities of Graasp
+- The number and duration of your visits
+- Information about what parts of Graasp you visited
 
 ### 4.4 Uploaded Data
 
@@ -99,16 +101,19 @@ You can create content (“Uploaded Data”) which may include Personal Data (e.
 ## 5. Cookies
 
 A cookie is a file containing an identifier (a string of letters and numbers) that is sent by a web server to a web browser and is stored by the browser. When you access the Graasp platform, the installation of cookies on your devices is possible according to your settings, which will allow Graasp to recognize your browser, during the validity time of the cookies. The cookies that Graasp generates allows:
-to prepare statistics including frequency of access, the use and performances of websites;
-to store preferences and parameters (authentification)
-to enable you to access reserved or personal content on the Graasp platform
-to improve our communication and services.
+
+- to prepare statistics including frequency of access, the use and performances of websites;
+- to store preferences and parameters (authentification)
+- to enable you to access reserved or personal content on the Graasp platform
+- to improve our communication and services.
+
 Most web browsers automatically accept cookies but provide controls that allow you to block or delete them. Please refer to your browser’s privacy or help documentation to find instructions for blocking or deleting cookies. For examples: Edge, Safari, Chrome, Firefox
 
 If you choose to refuse cookies, you may not have access to certain functionalities of Graasp, which we cannot be held responsible for. The identifier is then sent back to the server each time the browser requests a page from the server. Cookies or similar technologies can be useful in many ways to make your visit in Graasp simpler, more pleasant and more pertinent. Various types of cookies are present in Graasp:
-Cookies that are strictly necessary, which are necessary for navigation, along with your authentication token after logging in, and to secure Graasp;
-Functionality cookies, which are collecting some of your surfing preferences such as language preferences;
-Graasp does not use advertising cookies
+
+- Cookies that are strictly necessary, which are necessary for navigation, along with your authentication token after logging in, and to secure Graasp;
+- Functionality cookies, which are collecting some of your surfing preferences such as language preferences;
+- Graasp does not use advertising cookies
 
 ## 6. How Graasp retain your data
 
@@ -118,9 +123,10 @@ Your Personal Data is stored on secure servers at our Service Provider’s premi
 
 ## 7. Data Sharing
 
-Graasp are sharing your Personal Data with the following recipients exclusively:
-Authorized employees and Graasp managers
-Our Service Providers
+Graasp is sharing your Personal Data with the following recipients exclusively:
+
+- Authorized employees and Graasp managers
+- Our Service Providers
 
 ## 8. Service Providers and Transfers
 
@@ -149,12 +155,14 @@ Graasp has put in place appropriate security measures pursuant to the acknowledg
 The user has a number of rights according to the data protection legislation. These rights can be limited in particular when they affect rights and freedom of others. Graasp will inform you of applicable exceptions in our answer to your potential request.
 
 These rights include:
-right of access: You have the right to know what Personal Data Graasp hold about you and to ask, in writing, to see your Personal Data. You can directly have this information by contacting the data controllers: <contact@graasp.org>
-right to be informed: You have the right to be informed how your Personal and Uploaded Data will be used. This Privacy Policy as well as any additional information or notice that is provided to you either at the time you provided your details, or otherwise, is intended to provide you with this information.
-right to withdraw consent: Graasp processes your Personal Data and Uploaded Data on the basis of your consent; you can withdraw that consent at any time.
-right of erasure: In some cases, you have the right to have your Personal and Uploaded Data to be deleted.
-right of rectification: If you believe your Personal Data is inaccurate you have the right to ask for their update.
-right to file a complaint: If you are unhappy with the way in which Graasp have handled your Personal or Uploaded Data, you have the right to file a complaint with the Federal Data Protection and Information Commissioner (FDPIC) or with the supervisory authority of your country or residency.
+
+- right of access: You have the right to know what Personal Data Graasp hold about you and to ask, in writing, to see your Personal Data. You can directly have this information by contacting the data controllers: <contact@graasp.org>
+- right to be informed: You have the right to be informed how your Personal and Uploaded Data will be used. This Privacy Policy as well as any additional information or notice that is provided to you either at the time you provided your details, or otherwise, is intended to provide you with this information.
+- right to withdraw consent: Graasp processes your Personal Data and Uploaded Data on the basis of your consent; you can withdraw that consent at any time.
+- right of erasure: In some cases, you have the right to have your Personal and Uploaded Data to be deleted.
+- right of rectification: If you believe your Personal Data is inaccurate you have the right to ask for their update.
+- right to file a complaint: If you are unhappy with the way in which Graasp have handled your Personal or Uploaded Data, you have the right to file a complaint with the Federal Data Protection and Information Commissioner (FDPIC) or with the supervisory authority of your country or residency.
+
 Graasp reserve the right to refuse any abusive request or one which is contrary to applicable laws.
 
 ## 11. Changes to this Privacy Policy
