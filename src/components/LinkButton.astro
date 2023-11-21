@@ -1,0 +1,24 @@
+---
+interface Props {
+  href: string;
+}
+const { href } = Astro.props;
+---
+
+<a {href} class="justify-self-center grow p-2 rounded-md"
+  ><div class="innerText">
+    <slot />
+  </div>
+</a>
+<style>
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    transition: all linear 100ms;
+  }
+  a:hover {
+    background-color: rgb(var(--accent-dark), 20%);
+  }
+</style>

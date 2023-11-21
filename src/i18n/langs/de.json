@@ -1,0 +1,21 @@
+{
+  "meta.description": "Graasp, Lernerfahrungen Plattform",
+  "splash.title": "Deine all-in-one Plattform für Lernerfahrungen",
+  "splash.subtitle": "Erstellen, erforschen und teilen Sie ansprechende Bildungsressourcen",
+  "nav.terms": "Nutzungsbedingungen",
+  "nav.privacy-policy": "Datenschutz",
+  "nav.disclaimer": "Rechtliche Hinweise",
+
+  "footer.partners.title": "Partner",
+
+  "footer.social.title": "Soziale Netzwerke",
+
+  "footer.actionCall": "Starten Sie mit einem kostenlosen Konto",
+
+  "footer.support.title": "Kundendienst",
+  "footer.support.tutorials": "Tutorials",
+  "footer.support.tutorials.link": "https://player.graasp.org/07773683-c882-48b5-961e-1fe54833b58c",
+  "footer.support.developers": "Entwikler Resourcen",
+  "footer.support.pitch": "Presentation",
+  "footer.support.contact": "Kontakt"
+}

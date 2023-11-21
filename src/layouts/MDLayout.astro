@@ -1,0 +1,50 @@
+---
+import Layout from "./Layout.astro";
+import type { LayoutProps } from "./Layout.astro";
+import type { MarkdownLayoutProps } from "astro";
+
+type Props = MarkdownLayoutProps<LayoutProps>;
+---
+
+<Layout {...Astro.props.frontmatter}>
+  <main class="markdown">
+    <slot />
+  </main>
+</Layout>
+
+<style is:global>
+  main {
+    margin: 24px auto auto auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  .markdown h1 {
+    @apply text-4xl md:text-6xl font-bold mb-10 mt-10;
+  }
+  .markdown h2 {
+    @apply text-2xl md:text-4xl font-semibold mb-5 mt-10;
+  }
+  .markdown h3 {
+    @apply text-xl font-medium mt-5;
+  }
+  .markdown ol {
+    @apply list-decimal ms-8 list-outside;
+  }
+  .markdown ul {
+    @apply list-disc list-outside ms-8;
+  }
+  .markdown p {
+    margin-block-start: 12px;
+    margin-block-end: 12px;
+  }
+  .markdown p,
+  li {
+    @apply text-base;
+  }
+  .markdown a {
+    @apply hover:underline text-graasp;
+  }
+</style>

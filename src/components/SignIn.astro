@@ -1,0 +1,15 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+type Props = {
+  size?: "big" | "small";
+};
+const { size = "small" } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<a
+  href="https://auth.graasp.org/signin"
+  class:list={["btn btn-primary text-white", size === "small" ? "btn-sm" : ""]}
+  >{t("action.signIn")}</a
+>
