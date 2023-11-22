@@ -70,7 +70,13 @@ const t = useTranslations(lang);
 <!-- start main content -->
 <slot />
 <!-- end main content -->
-<footer class="flex flex-col">
+<footer class="flex flex-col gap-1">
+  <p class="text-center">
+    Developed in 🇨🇭 by the <a
+      class="underline"
+      href="https://association.graasp.org">Graasp Association</a
+    >
+  </p>
   <div class="flex flex-col sm:flex-row m-4 gap-10">
     <FooterSection name={t("footer.partners.title")}>
       <ExternalLink href="https://epfl.ch">EPFL</ExternalLink>
@@ -141,24 +147,13 @@ const t = useTranslations(lang);
       {t("nav.disclaimer")}
     </LinkButton>
   </div>
-  <p class="trademark">
+  <p class="copyright">
     &copy; Graasp 2014 - {new Date().getFullYear()}
   </p>
 </footer>
 
 <style>
-  .home {
-    font-weight: 500;
-    font-size: 1.5rem;
-  }
-
-  .get-started {
-    text-align: center;
-  }
-  /* .button:hover {
-    box-shadow: 0px 18px 40px -12px rgb(var(--action-color));
-  } */
-  .trademark {
+  .copyright {
     margin-top: 8px;
     text-align: center;
   }
