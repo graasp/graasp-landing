@@ -1,41 +1,38 @@
 ---
-import { getLangFromUrl } from "../i18n/utils";
+import Icon from "astro-icon";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import Layout from "../layouts/Layout.astro";
 import { getRelativeLocaleUrl } from "astro:i18n";
+import { transitionEnabledOnThisPage } from "astro:transitions/client";
 
 const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<Layout title="Page not found" description="not found" {lang}>
-  <main class="grow flex">
-    <div class="flex m-auto flex-col items-center place-content-center gap-8">
-      <div class="graasp-logo"></div>
-      <div>
-        <h1 class="text-4xl font-bold">404: Not found</h1>
+<Layout title={t("404.title")} description={t("404.description")} {lang}>
+  <main class="grow flex p-5 my-10">
+    <div
+      class="flex m-auto flex-col items-center place-content-center gap-8 max-w-[500px]"
+    >
+      <Icon name="graasp-color" class="w-auto max-w-[150px]" />
+      <div class="mb-20">
+        <h1 class="text-6xl font-bold">
+          <span
+            class="bg-clip-text text-transparent bg-gradient-to-r from-graasp to-graaspLight"
+            >404</span
+          >
+          <span class="text-2xl font-semibold mb-4">Not found</span>
+        </h1>
         <p>
           Sorry, we could not find this page. If this issue persists, please
           contact us.
         </p>
       </div>
-      <span
-        >&larr; <a class="home link" href={getRelativeLocaleUrl(lang, "/")}>
-          Go Home</a
-        ></span
+      <span class="underline text-player"
+        >&larr; <a href={getRelativeLocaleUrl(lang, "/")}> Go Home</a></span
       >
     </div>
   </main>
 </Layout>
 
-<style>
-  .graasp-logo {
-    height: 124px;
-    width: 124px;
-    background: linear-gradient(
-      45deg,
-      rgb(var(--accent)),
-      rgb(var(--accent-light))
-    );
-    -webkit-mask-image: url(/graasp-square-white.svg);
-    mask-image: url(/graasp-square-white.svg);
-  }
-</style>
+<style></style>

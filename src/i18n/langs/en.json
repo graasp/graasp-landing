@@ -19,6 +19,9 @@
   "nav.privacy-policy": "Privacy Policy",
   "nav.disclaimer": "Disclaimer",
 
+  "404.title": "Page not found",
+  "404.description": "The requested page could not be found",
+
   "footer.partners.title": "Partners",
 
   "footer.social.title": "Social",
