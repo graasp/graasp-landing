@@ -11,6 +11,7 @@
   "intro.teaser": "Support your digital learning journey with our four core services",
 
   "platform.library": "Discover and share Open Educational Resources in our",
+  "platform.library.actionCall": "Explore now",
   "platform.builder": "Create your own learning activities with the",
   "platform.player": "Engage your students in your activities with the",
   "platform.analytics": "Gain valuable insights and explore dashboards with",
@@ -21,6 +22,9 @@
 
   "404.title": "Page not found",
   "404.description": "The requested page could not be found",
+
+  "footer.description": "Developed in 🇨🇭 by the",
+  "footer.description.association": "Graasp Association",
 
   "footer.partners.title": "Partners",
 

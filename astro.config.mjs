@@ -18,7 +18,7 @@ export default defineConfig({
   experimental: {
     i18n: {
       defaultLocale: "en",
-      locales: ["en", "fr", "de"],
+      locales: ["en", "fr", "de", "es"],
       // routingStrategy: "prefix-always",
     },
   },
