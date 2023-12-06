@@ -164,3 +164,5 @@ We may revise this Privacy Policy from time to time. The most current version of
 ### 12.1 Applicable law and jurisdiction
 
 Swiss material laws are applicable. The place of execution and of jurisdiction is in Valais.
+
+[&larr; Accueil](../)
