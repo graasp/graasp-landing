@@ -13,6 +13,10 @@ on:
         required: true
         default: dev
 
+permissions:
+  id-token: write # This is required for requesting the JWT
+  contents: read # This is required for actions/checkout
+
 jobs:
   deploy-app:
     name: Deploy to (${{ inputs.environment || 'dev'}})
@@ -33,10 +37,11 @@ jobs:
         shell: bash
 
       - name: Deploy
-        uses: graasp/graasp-deploy/.github/actions/deploy-s3@v1
+        uses: graasp/graasp-deploy/.github/actions/deploy-s3@main
         # Replace input build-folder or version if needed
         with:
           build-folder: 'dist'
+          role-to-assume: ${{ secrets.AWS_ROLE }}
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ vars.AWS_REGION }}
