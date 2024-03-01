@@ -3,7 +3,6 @@ import { Icon } from "astro-icon/components";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import Layout from "../layouts/Layout.astro";
 import { getRelativeLocaleUrl } from "astro:i18n";
-import { transitionEnabledOnThisPage } from "astro:transitions/client";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);

@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "./Layout.astro";
 import { useTranslations, type UILanguages } from "../i18n/utils";
 import PlatformCard from "../components/Features/PlatformCard.astro";
 import PlatformSection from "../components/Features/PlatformSection.astro";
@@ -17,18 +17,29 @@ const t = useTranslations(lang);
   <main>
     <section>
       <h2>{t("Transform your teaching experience with Graasp")}</h2>
+      <div class="grid grid-rows-1 grid-flow-col gap-6">
+        <div>
+          <p>
+            {
+              t(
+                "Whether you're crafting tailored content, engaging learners in dynamic presentations, or conducting studies to improve the landscape of digital education, our platform offers a wide range of functionalities to support the creation, presentation, sharing, and analysis of your educational content. Register for free to Graasp today, and start creating and sharing your knowledge in a global network of people strongly passionate about education like you! Support your digital learning journey with our four core services",
+              )
+            }
+          </p>
+          <p>
+            {
+              t(
+                "Support your digital learning journey with our four core services",
+              )
+            }
+          </p>
 
-      <p>
-        {
-          t(
-            "Whether you're crafting tailored content, engaging learners in dynamic presentations, or conducting studies to improve the landscape of digital education, our platform offers a wide range of functionalities to support the creation, presentation, sharing, and analysis of your educational content. Register for free to Graasp today, and start creating and sharing your knowledge in a global network of people strongly passionate about education like you! Support your digital learning journey with our four core services",
-          )
-        }
-      </p>
-
-      <Button>{t("Register to Graasp")}</Button>
-
-      <img />
+          <Button>{t("Register to Graasp")}</Button>
+        </div>
+        <div>
+          <img class="rounded-3xl" src="https://picsum.photos/200/200" />
+        </div>
+      </div>
 
       <section>
         <h3>{t("Graasp at a glance")}</h3>
@@ -78,71 +89,117 @@ const t = useTranslations(lang);
           )
         }
       </p>
-
-      <video></video>
+      <video class="m-auto" width="420" height="340" controls>
+        <source src="movie.mp4" type="video/mp4" />
+        <source src="movie.ogg" type="video/ogg" />
+         Your browser does not support the video tag.
+      </video>
     </section>
 
     <section>
-      <h2>{t("Graasp's feature")}</h2>
+      <h2 class="text-center">{t("Graasp's feature")}</h2>
 
       <PlatformSection
         caption="Start with the Builder!"
         title="Use the BUILDER to give shape to your ideas and lectures."
         description="Create content freely or by using templates aligned with various your teaching style and pedagogical strategy. Even without templates, our platform's intuitive design ensures a guided and structured content creation experience, reminiscent of familiar file systems. Collaboration is encouraged, enabling multiple contributors to create cohesive content, and easing the process for teams working collaboratively."
       />
-      <Button>{t("How to Set Up")}</Button><Button>
-        {t("How to Manage it")}
-      </Button><Button>{t("Start Creating")}</Button>
+      <div class="grid grid-cols-4 gap-2">
+        <Button>{t("How to Set Up")}</Button>
+        <Button>
+          {t("How to Manage it")}
+        </Button>
+        <div class="col-span-2">
+          <Button fullWidth>{t("Start Creating")}</Button>
+        </div>
+      </div>
     </section>
 
     <PlatformSection
+      direction="left"
       caption="Present to your audience!"
       title="Elevate your material withthe PLAYER"
       description="Engage learners with an array of interactive tools and features. From assessment tools such as quizzes, tests, and open questions, to simulating real-world experiments through physics or chemistry labs, coding skill assessments with the code capsule and more! Embed multimedia content, create shared writing pads, and interact with chatbots. Our platform enables educators to engage learners effectively and in a variety of ways, ensuring a rich and educative experience both in traditional classrooms and remote learning environments."
     />
-    <Button>{t("Player Tutorial")}</Button><Button>
-      {t("How to add Apps")}
-    </Button><Button>{t("Begin Experiencing")}</Button>
+    <div class="grid grid-cols-4 gap-2">
+      <Button>{t("Player Tutorial")}</Button><Button>
+        {t("How to add Apps")}
+      </Button>
+
+      <div class="col-span-2">
+        <Button fullWidth>{t("Begin Experiencing")}</Button>
+      </div>
+    </div>
 
     <PlatformSection
       caption="Learn from your success and mistakes"
       title="Improve your material through the ANALYTICS"
       description="Uncover invaluable insights into learner engagement and content performance through our analytics dashboard. Track access, interactions, downloads, and more, empowering educators with data-driven insights to enhance student engagement and tailor content delivery to individual classroom needs"
     />
-    <Button>{t("Analytics Tutorial")}</Button><Button>
-      {t("Filter Analytics")}
-    </Button><Button>{t("Start Learning")}</Button>
+    <div class="grid grid-cols-4 gap-2">
+      <Button variant="accent">{t("Analytics Tutorial")}</Button><Button>
+        {t("Filter Analytics")}
+      </Button>
+
+      <div class="col-span-2">
+        <Button fullWidth>{t("Start Learning")}</Button>
+      </div>
+    </div>
 
     <PlatformSection
+      direction="left"
       caption="Share your knowledge!"
       title="Join a community of educators in the LIBRARY"
       description="Collaboration lies at the heart of Graasp. Our shared library fosters a vibrant community of educators and professionals. Easily share and access content, co-create materials, and connect with fellow educators, amplifying knowledge sharing and collective learning experiences."
     />
-    <Button>{t("How to Navigate")}</Button>
-    <Button>
-      {t("How to Publish")}
-    </Button><Button>{t("Explore Content")}</Button>
+    <div class="grid grid-cols-4 gap-2">
+      <Button>{t("How to Navigate")}</Button>
+      <Button>
+        {t("How to Publish")}
+      </Button>
+
+      <div class="col-span-2">
+        <Button fullWidth>{t("Explore Content")}</Button>
+      </div>
+    </div>
   </main>
+
+  <!-- TODO -->
+  <!--
   <section>
-    <h2>{t("Unlock even more with Graasp PREMIUM")}</h2>
+    <h2 class="text-center">{t("Unlock even more with Graasp PREMIUM")}</h2>
 
     <PremiumPlansTable />
-    <Button>{t("Upgrade to Premium today")}</Button>
+    <div class="text-center">
+      <Button>{t("Upgrade to Premium today")}</Button>
+    </div>
   </section>
+-->
+
   <section>
-    <img />
-    <caption>{t("Graasp is constantly growing!")}</caption>
-    <h2>{t("Visit our blog to discover all the latest updates!")}</h2>
-    <caption>{t("Discover updates, enrich your Graasp experience")}</caption>
+    <div class="grid grid-rows-1 grid-flow-col gap-6">
+      <div>
+        <img class="rounded-3xl" src="https://picsum.photos/400/200" />
+      </div>
+      <div>
+        <p class="text-right">{t("Graasp is constantly growing!")}</p>
+        <h2 class="text-right">
+          {t("Visit our blog to discover all the latest updates!")}
+        </h2>
+        <p class="text-right">
+          {t("Discover updates, enrich your Graasp experience")}
+          <br />
+          <Button>{t("Visit our Blog")}</Button>
+        </p>
+      </div>
+    </div>
 
-    <Button>{t("Visit our Blog")}</Button>
+    <SubscribeSection />
   </section>
 
-  <SubscribeSection />
+  <style>
+    main {
+      @apply grow bg-blue-50 text-black;
+    }
+  </style>
 </Layout>
-
-<style>
-  main {
-    @apply grow bg-blue-50 text-black;
-  }
-</style>

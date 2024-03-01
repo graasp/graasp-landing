@@ -1,0 +1,56 @@
+---
+import Button from "../Button.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { Icon } from "astro-icon/components";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+interface Props {
+  caption: string;
+  name: string;
+  description: string;
+  href: string;
+  buttonText: string;
+  color: "builder" | "player" | "analytics" | "library";
+  direction: "left" | "right";
+}
+const {
+  name,
+  description,
+  caption,
+  direction = "left",
+  href,
+  buttonText,
+  color,
+} = Astro.props;
+
+const textColor = `text-${color}`;
+const bgColor = `bg-${color}`;
+---
+
+<div class="text-center">
+  <div
+    class:list={[
+      "flex flex-col",
+      direction === "left" ? "items-start" : "items-end",
+    ]}
+  >
+    <p class="text-sm">{caption}</p>
+    <h4 class:list={["uppercase", textColor]}>
+      {name}
+    </h4>
+  </div>
+  <div class="flex flex-row items-center">
+    <Icon name={`${color}-color`} font-size="4rem" class="shrink-0" />
+    <p>{description}</p>
+  </div>
+
+  <Button {href} color={bgColor} fullWidth>{buttonText}</Button>
+</div>
+
+<style define:vars={{ bgColor, textColor }}>
+  a {
+    background: var(--bgColor);
+  }
+</style>

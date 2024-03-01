@@ -1,17 +1,14 @@
 ---
 import LinkButton from "../components/LinkButton.astro";
 import ExternalLink from "../components/ExternalLink.astro";
-import SignIn from "../components/SignIn.astro";
-import SignUp from "../components/SignUp.astro";
+import Header from "../components/Header.astro";
 import MailLink from "../components/MailLink.astro";
 import SocialLink from "../components/SocialLink.astro";
 import { Icon } from "astro-icon/components";
 import FooterSection from "../components/FooterSection.astro";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import { useTranslations, type UILanguages } from "../i18n/utils";
-import LanguageSelector from "../components/LanguageSelector.astro";
 import { GA_MEASUREMENT_ID } from "../config/env.ts";
-
 export type LayoutProps = {
   title: string;
   description: string;
@@ -32,125 +29,119 @@ const t = useTranslations(lang);
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-  </head>
-  <script
-    type="text/partytown"
-    async
-    src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-  ></script>
+    <!-- preload fonts -->
+    <link
+      rel="preload"
+      href="/fonts/Nunito.ttf"
+      as="font"
+      type="font/truetype"
+      cross-origin="anonymous"
+    />
+    <!-- partitown script -->
+    <script
+      is:inline
+      type="text/partytown"
+      async
+      src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+    ></script><script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
 
-  <script type="text/partytown">
-    window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        window.dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", GA_MEASUREMENT_ID);
+    </script></head
+  >
 
-    function gtag() {
-      window.dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-    gtag("config", GA_MEASUREMENT_ID);
-  </script>
   <body>
-    <header>
-      <div class="flex flex-row items-center justify-between px-2 sm:px-8">
-        <a
-          class="flex flex-row items-center gap-2"
-          href={getRelativeLocaleUrl(lang, "/")}
-        >
-          <Icon name="graasp" font-size="38px" />
-          <span class="font-semibold text-xl"> Graasp</span>
-        </a>
-        <div class="flex flex-row gap-4 items-center">
-          <LanguageSelector />
-          <span class="hidden sm:block"><SignIn /></span>
-          <SignUp />
-        </div>
-      </div>
-    </header>
+    <Header />
   </body>
-</html>
-<!-- start main content -->
-<slot />
-<!-- end main content -->
-<footer class="flex flex-col gap-1">
-  <p class="text-center">
-    {t("footer.description")}
-    <a class="underline" href="https://association.graasp.org"
-      >{t("footer.description.association")}</a
-    >
-  </p>
-  <div class="flex flex-col sm:flex-row m-4 gap-10">
-    <FooterSection name={t("footer.partners.title")}>
-      <ExternalLink href="https://epfl.ch">EPFL</ExternalLink>
-      <ExternalLink href="https://edtech-collider.ch">
-        Swiss EdTech Collider
-      </ExternalLink>
-      <ExternalLink href="https://www.golabz.eu">Go-Lab</ExternalLink>
-      <ExternalLink href="https://d-skills.ch/">
-        Swiss Digital Skills Academy
-      </ExternalLink>
-      <ExternalLink href="https://www.ihub4schools.eu/">
-        iHub4Schools
-      </ExternalLink>
-      <ExternalLink href="https://belearn.swiss/en/">BeLEARN</ExternalLink>
-      <ExternalLink href="https://go-ga.org/">GO-GA</ExternalLink>
-    </FooterSection>
-    <FooterSection name={t("footer.social.title")}>
-      <SocialLink href="https://www.facebook.com/graasp">
-        <Icon name="facebook" slot="icon" class="w-6 h-6" />
-        <span>Facebook</span>
-      </SocialLink>
-      <SocialLink href="https://twitter.com/graasp">
-        <Icon name="twitter" slot="icon" class="w-6 h-6" />
-        <span>Twitter</span>
-      </SocialLink>
-      <SocialLink href="https://www.facebook.com/graasp">
-        <Icon name="instagram" slot="icon" class="w-6 h-6" />
-        <span>Instagram</span>
-      </SocialLink>
-      <SocialLink href="https://www.linkedin.com/company/graasp">
-        <Icon name="linkedin" slot="icon" class="w-6 h-6" />
-        <span>LinkedIn</span>
-      </SocialLink>
-      <SocialLink href="https://github.com/graasp">
-        <Icon name="github" slot="icon" class="w-6 h-6" />
-        <span>GitHub</span>
-      </SocialLink>
-      <SocialLink href="https://tooting.ch/@graasp">
-        <Icon name="mastodon" slot="icon" class="w-6 h-6" />
-        <span>Mastodon</span>
-      </SocialLink>
-    </FooterSection>
-    <FooterSection name={t("footer.support.title")}>
-      <ExternalLink href={t("footer.support.tutorials.link")}>
-        {t("footer.support.tutorials")}
-      </ExternalLink>
-      <ExternalLink href="https://graasp.github.io/docs/">
-        {t("footer.support.developers")}
-      </ExternalLink>
-      <ExternalLink
-        href="https://portal.klewel.com/watch/webcast/swiss-edtech-collider-april-2017/talk/2/"
+  <!-- start main content -->
+  <slot />
+  <!-- end main content -->
+  <footer class="flex flex-col gap-1">
+    <p class="text-center">
+      {t("footer.description")}
+      <a class="underline" href="https://association.graasp.org"
+        >{t("footer.description.association")}</a
       >
-        {t("footer.support.pitch")}
-      </ExternalLink>
-      <MailLink href="mailto:contact@graasp.org">
-        {t("footer.support.contact")}
-      </MailLink>
-    </FooterSection>
-  </div>
-  <div class="flex flex-col sm:flex-row gap-1">
-    <LinkButton href={getRelativeLocaleUrl(lang, "terms")}>
-      {t("nav.terms")}
-    </LinkButton>
-    <LinkButton href={getRelativeLocaleUrl(lang, "privacy")}>
-      {t("nav.privacy-policy")}
-    </LinkButton>
-    <LinkButton href={getRelativeLocaleUrl(lang, "disclaimer")}>
-      {t("nav.disclaimer")}
-    </LinkButton>
-  </div>
-  <p class="copyright">
-    &copy; Graasp 2014 - {new Date().getFullYear()}
-  </p>
-</footer>
+    </p>
+    <div class="flex flex-col sm:flex-row m-4 gap-10">
+      <FooterSection name={t("footer.partners.title")}>
+        <ExternalLink href="https://epfl.ch">EPFL</ExternalLink>
+        <ExternalLink href="https://edtech-collider.ch">
+          Swiss EdTech Collider
+        </ExternalLink>
+        <ExternalLink href="https://www.golabz.eu">Go-Lab</ExternalLink>
+        <ExternalLink href="https://d-skills.ch/">
+          Swiss Digital Skills Academy
+        </ExternalLink>
+        <ExternalLink href="https://www.ihub4schools.eu/">
+          iHub4Schools
+        </ExternalLink>
+        <ExternalLink href="https://belearn.swiss/en/">BeLEARN</ExternalLink>
+        <ExternalLink href="https://go-ga.org/">GO-GA</ExternalLink>
+      </FooterSection>
+      <FooterSection name={t("footer.social.title")}>
+        <SocialLink href="https://www.facebook.com/graasp">
+          <Icon name="facebook" slot="icon" class="w-6 h-6" />
+          <span>Facebook</span>
+        </SocialLink>
+        <SocialLink href="https://twitter.com/graasp">
+          <Icon name="twitter" slot="icon" class="w-6 h-6" />
+          <span>Twitter</span>
+        </SocialLink>
+        <SocialLink href="https://www.facebook.com/graasp">
+          <Icon name="instagram" slot="icon" class="w-6 h-6" />
+          <span>Instagram</span>
+        </SocialLink>
+        <SocialLink href="https://www.linkedin.com/company/graasp">
+          <Icon name="linkedin" slot="icon" class="w-6 h-6" />
+          <span>LinkedIn</span>
+        </SocialLink>
+        <SocialLink href="https://github.com/graasp">
+          <Icon name="github" slot="icon" class="w-6 h-6" />
+          <span>GitHub</span>
+        </SocialLink>
+        <SocialLink href="https://tooting.ch/@graasp">
+          <Icon name="mastodon" slot="icon" class="w-6 h-6" />
+          <span>Mastodon</span>
+        </SocialLink>
+      </FooterSection>
+      <FooterSection name={t("footer.support.title")}>
+        <ExternalLink href={t("footer.support.tutorials.link")}>
+          {t("footer.support.tutorials")}
+        </ExternalLink>
+        <ExternalLink href="https://graasp.github.io/docs/">
+          {t("footer.support.developers")}
+        </ExternalLink>
+        <ExternalLink
+          href="https://portal.klewel.com/watch/webcast/swiss-edtech-collider-april-2017/talk/2/"
+        >
+          {t("footer.support.pitch")}
+        </ExternalLink>
+        <MailLink href="mailto:contact@graasp.org">
+          {t("footer.support.contact")}
+        </MailLink>
+      </FooterSection>
+    </div>
+    <div class="flex flex-col sm:flex-row gap-1">
+      <LinkButton href={getRelativeLocaleUrl(lang, "terms")}>
+        {t("nav.terms")}
+      </LinkButton>
+      <LinkButton href={getRelativeLocaleUrl(lang, "privacy")}>
+        {t("nav.privacy-policy")}
+      </LinkButton>
+      <LinkButton href={getRelativeLocaleUrl(lang, "disclaimer")}>
+        {t("nav.disclaimer")}
+      </LinkButton>
+    </div>
+    <p class="copyright">
+      &copy; Graasp 2014 - {new Date().getFullYear()}
+    </p>
+  </footer>
+</html>
 
 <style>
   .copyright {
@@ -161,7 +152,7 @@ const t = useTranslations(lang);
 
 <style is:global>
   :root {
-    --accent: 80, 80, 210;
+    /* --accent: 80, 80, 210; */
     --accent-light: 0, 158, 255;
     --accent-dark: 7, 7, 163;
     --action-color: 27, 183, 31;
@@ -178,24 +169,28 @@ const t = useTranslations(lang);
       white 60%
     );
   }
+
   /* Register your custom font family and tell the browser where to find it. */
   @font-face {
     font-family: "Nunito";
-    src: url("/fonts/Nunito.ttf") format("ttf");
-    font-weight: normal;
+    src: url("/fonts/Nunito.ttf") format("truetype");
+    font-weight: 100 900;
     font-style: normal;
     font-display: swap;
   }
 
   html {
-    font-family: system-ui, sans-serif;
-    background: #f1f4fc;
+    /* background: #f1f4fc; */
     color: black;
     background-size: 224px;
     @media (prefers-color-scheme: dark) {
       background: #000922;
       color: white;
     }
+  }
+  main {
+    @apply px-10;
+    @apply bg-background;
   }
   code {
     font-family:
@@ -215,15 +210,48 @@ const t = useTranslations(lang);
     margin: 0px;
   }
   header {
-    color: white;
+    color: oklch(var(--p));
     padding: 16px;
-    background-color: rgb(var(--accent));
+    @apply bg-white;
+    @apply shadow-gray-200 shadow;
     z-index: 10;
   }
   footer {
     padding: 1rem;
     background-color: rgb(var(--accent));
     color: white;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: oklch(var(--p));
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  h4 {
+    font-size: 1.2em;
+  }
+
+  h5 {
+    font-size: 1em;
+  }
+
+  section {
+    margintop: 40px;
+    marginbottom: 40px;
   }
 
   p {

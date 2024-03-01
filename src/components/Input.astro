@@ -1,0 +1,13 @@
+---
+type Props = {
+  name: string;
+  label: string;
+  placeholder: string;
+};
+const { name, label, placeholder } = Astro.props;
+---
+
+<>
+  <label for={name}>{label}</label>
+  <input class="p-2 rounded-xl" {placeholder} id={name} />
+</>

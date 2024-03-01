@@ -8,13 +8,31 @@ interface Props {
   title: string;
   description: string;
   caption: string;
+  direction: "left" | "right";
 }
-const { title, description, caption } = Astro.props;
+const { title, direction = "right", description, caption } = Astro.props;
 ---
 
-<div class="grow">
-  <img />
-  <caption>{caption}</caption>
-  <h5>{title}</h5>
-  <p>{description}</p>
+<div
+  class:list={[
+    "flex",
+    "gap-4",
+    "my-4",
+    direction === "left" ? "flex-row-reverse" : "",
+  ]}
+>
+  <div class="flex-none">
+    <img class="rounded-3xl" src="https://picsum.photos/150/200" />
+  </div>
+  <div class="flex-1">
+    <p class:list={[direction === "left" ? "text-left" : "text-right"]}>
+      {caption}
+    </p>
+    <h3 class:list={[direction === "left" ? "text-left" : "text-right"]}>
+      {title}
+    </h3>
+    <p class:list={[direction === "left" ? "text-left" : "text-right"]}>
+      {description}
+    </p>
+  </div>
 </div>

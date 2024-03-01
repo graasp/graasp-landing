@@ -1,0 +1,20 @@
+---
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import Button from "../Button.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="bg-white p-10 text-center">
+  <h2>{t("Our Mission")}</h2>
+
+  <p>
+    We aim at empowering educators to become the best professionals they can be,
+    through technology and revolutionizing their teaching and learning
+    experiences in a wide learning community!
+  </p>
+  <p>Do you want to know more?</p>
+
+  <Button>Get to Know Us</Button>
+</section>

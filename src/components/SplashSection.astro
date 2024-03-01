@@ -1,7 +1,5 @@
 ---
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
-import SignUp from "./SignUp.astro";
-import NegativeHandLogo from "./NegativeHandLogo.astro";
 import { Icon } from "astro-icon/components";
 
 const lang = getLangFromUrl(Astro.url);
@@ -9,53 +7,68 @@ const t = useTranslations(lang);
 ---
 
 <section class="flex flex-col mt-5">
-  <div class="flex flex-col justify-start relative grow sm:w-1/2 gap-10">
-    <div class="flex flex-col gap-3">
-      <p>Graasp</p>
-      <h1 class="text-4xl sm:text-5xl font-bold">
-        {t("Your learning experience platform")}
-      </h1>
-      <p>
-        {
-          t(`Revolutionize your education and professional development!
-        Our platform cares for the needs of educators and researchers, seeking a complete solution for content creation, presentation, and collaborative knowledge sharing.`)
-        }
-      </p>
+  <div class="flex flex-row justify-start relative grow sm:w-1/2 gap-10">
+    <div class="flex flex-col gap-10">
+      <div class="flex flex-col gap-5">
+        <div class="flex flex-col">
+          <h2>Graasp</h2>
+          <h1 class="text-4xl sm:text-5xl font-bold">
+            {t("Your learning experience platform")}
+          </h1>
+        </div>
+        <p>
+          {
+            t(`Revolutionize your education and professional development!
+            Our platform cares for the needs of educators and researchers, seeking a complete solution for content creation, presentation, and collaborative knowledge sharing.`)
+          }
+        </p>
+      </div>
       <div class="flex flex-col gap-4">
-        <h3 class="text-2xl">
-          {t("splash.subtitle")}
-        </h3>
-        <span><SignUp size="big" /></span>
+        <div id="buttonsContainer" class="flex flex-row items-center gap-4">
+          <a
+            href="https://auth.graasp.org/signup"
+            class="btn btn-primary text-white"
+            ><slot>
+              {t("Start Here")}
+            </slot>
+          </a>
+          <a href="/" class="btn btn-accent btn">{t("Visit the Library")}</a>
+          <a href="/playstore" class="btn bg-playButtons"
+            ><div class="flex flex-row gap-4 items-center">
+              <Icon name="playstore" font-size="2rem" />
+              <div class="flex flex-col items-start text-white gap-1">
+                <span class="text-xs"> Get it on</span>
+                <span class="font-bold">Google Play</span>
+              </div>
+            </div>
+          </a>
+          <a href="/playstore" class="btn bg-playButtons"
+            ><div class="flex flex-row gap-4 items-center">
+              <Icon name="applestore" font-size="2rem" />
+              <div class="flex flex-col items-start text-white gap-1">
+                <span class="text-xs"> Get it on</span>
+                <span class="font-bold">App Store</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="flex flex-col gap-3">
+        <p class="text-slate-400">{t("Supported by")}</p>
+        <div id="logosContainer" class="flex flex-row gap-5">
+          <span>EPFL</span>
+          <span>UNCTAD</span>
+          <span>BeLEARN</span>
+          <span>EDTECH</span>
+          <span>GOLAB</span>
+          <span>GOGA</span>
+          <span>UNINE</span>
+          <span>IHUB4SCHOOL</span>
+        </div>
       </div>
     </div>
-    <div
-      class="p-5 m-auto place-items-center justify-center flex flex-col sm:flex-row items-center gap-10 sm:gap-20 sm:my-[100px] pb-20"
-    >
-      <div class="sm:w-1/2 justify-self-end">
-        <Icon name="graasp-color" font-size="150px" class="sm:w-auto grow" />
-      </div>
-    </div>
-    <div
-      class="flex flex-col gap-1 mt-5 opacity-50 sticky bottom-3 w-full text-center"
-    >
-      <span class="text-base">{t("splash.learn-more")}</span>
-      <span class="text-3xl"> &darr;</span>
+    <div>
+      <img class="m-auto rounded-3xl" src="https://picsum.photos/200/200" />
     </div>
   </div>
-
-  <style>
-    .graasp-logo {
-      height: 320px;
-      width: 320px;
-      /* background-color: aqua; */
-      @apply bg-gradient-to-r from-graasp to-graaspLight;
-      -webkit-mask-image: url(/graasp-square-white.svg);
-      mask-image: url(/graasp-square-white.svg);
-    }
-    .text-gradient {
-      @apply bg-gradient-to-r from-graasp to-graaspLight;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  </style>
 </section>
