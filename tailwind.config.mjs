@@ -36,6 +36,25 @@ export default {
           accent: player,
           neutral: "#3d4451",
           "base-100": "#ffffff",
+
+          // spacing: {
+          //   test: "5px",
+          // },
+
+          h2: {
+            fontSize: "2em",
+            color: graasp,
+          },
+
+          h3: {
+            fontSize: "1.5em",
+            color: graasp,
+          },
+
+          h4: {
+            fontSize: "1.2em",
+            color: graasp,
+          },
         },
       },
     ],

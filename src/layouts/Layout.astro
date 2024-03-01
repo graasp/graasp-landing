@@ -5,7 +5,7 @@ import SignIn from "../components/SignIn.astro";
 import SignUp from "../components/SignUp.astro";
 import MailLink from "../components/MailLink.astro";
 import SocialLink from "../components/SocialLink.astro";
-import Icon from "astro-icon";
+import { Icon } from "astro-icon/components";
 import FooterSection from "../components/FooterSection.astro";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import { useTranslations, type UILanguages } from "../i18n/utils";
@@ -178,6 +178,15 @@ const t = useTranslations(lang);
       white 60%
     );
   }
+  /* Register your custom font family and tell the browser where to find it. */
+  @font-face {
+    font-family: "Nunito";
+    src: url("/fonts/Nunito.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
   html {
     font-family: system-ui, sans-serif;
     background: #f1f4fc;

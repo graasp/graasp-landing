@@ -1,18 +1,20 @@
 ---
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 interface Props {
-    title: string;
-  description:string
-  caption:string
+  title: string;
+  description: string;
+  caption: string;
 }
-const { title , description,caption } = Astro.props;
+const { title, description, caption } = Astro.props;
 ---
 
 <div class="grow">
-  <img/>
-<caption>{caption}</caption>
+  <img />
+  <caption>{caption}</caption>
   <h5>{title}</h5>
-<p>{description}</p>
-
-
+  <p>{description}</p>
 </div>

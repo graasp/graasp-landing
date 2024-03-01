@@ -1,21 +1,23 @@
 ---
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 
-interface Props { 
-}
-const {   } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+interface Props {}
+const {} = Astro.props;
 ---
 
 <table>
-    <tr>
-      <th>Standard</th>
-      <th>Premium</th>
-    </tr>
-    <tr>
-      <td>Alfreds Futterkiste</td>
-      <td>Germany</td>
-    </tr>
-    <tr>
-      <td>Francisco Chang</td>
-      <td>Mexico</td>
-    </tr>
-  </table>
+  <tr>
+    <th>{t("Standard")}</th>
+    <th>{t("Premium")}</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+</table>

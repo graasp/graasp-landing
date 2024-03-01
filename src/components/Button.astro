@@ -1,0 +1,16 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+type Props = {
+  size?: "big" | "small";
+  href: string;
+};
+const { size = "small", href } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<a
+  {href}
+  class:list={["btn btn-primary text-white ", size === "small" ? "btn-sm" : ""]}
+  ><slot /></a
+>
