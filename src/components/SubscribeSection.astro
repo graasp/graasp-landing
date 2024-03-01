@@ -1,0 +1,20 @@
+SubscribeSection---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import SignUp from "./SignUp.astro";
+import NegativeHandLogo from "./NegativeHandLogo.astro";
+import Icon from "astro-icon";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="flex flex-col mt-5">
+    <caption>Do you wanna be updated?</caption>
+    <h5>Subscribe to ournewsletter!</h5>
+
+    <input placeholder="Write your email address" name="Email Address" />
+    <button>Subscribe</button>
+</section>
+
+<style> 
+</style>

@@ -1,0 +1,17 @@
+---
+interface Props {
+  name: string;
+  description:string
+}
+const { name , description} = Astro.props;
+---
+
+<div class="grow">
+  <img/>
+
+  <h5>{name}</h5>
+<p>{description}</p>
+
+<button>Read More</button>
+
+</div>
