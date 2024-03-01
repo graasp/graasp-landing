@@ -15,9 +15,9 @@ on:
 
 jobs:
   deploy-app:
-    name: Deploy to (${{ inputs.environment }})
+    name: Deploy to (${{ inputs.environment || 'dev'}})
     runs-on: ubuntu-latest
-    environment: ${{ inputs.environment }}
+    environment: ${{ inputs.environment || 'dev' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
