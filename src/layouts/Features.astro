@@ -3,7 +3,7 @@ import Layout from "./Layout.astro";
 import { useTranslations, type UILanguages } from "../i18n/utils";
 import PlatformCard from "../components/Features/PlatformCard.astro";
 import PlatformSection from "../components/Features/PlatformSection.astro";
-import PremiumPlansTable from "../components/Features/PremiumPlansTable.astro";
+// import PremiumPlansTable from "../components/Features/PremiumPlansTable.astro";
 import SubscribeSection from "../components/SubscribeSection.astro";
 import Button from "../components/Button.astro";
 type Props = {
@@ -34,7 +34,7 @@ const t = useTranslations(lang);
             }
           </p>
 
-          <Button>{t("Register to Graasp")}</Button>
+          <Button href="">{t("Register to Graasp")}</Button>
         </div>
         <div>
           <img class="rounded-3xl" src="https://picsum.photos/200/200" />
@@ -46,18 +46,22 @@ const t = useTranslations(lang);
 
         <div class="grid grid-rows-1 grid-flow-col gap-4">
           <PlatformCard
+            href=""
             name="Builder"
             description={t("Tailored for Structured Content Creation")}
           />
           <PlatformCard
+            href=""
             name="Player"
             description={t("Interactive Engagement Made Easy ")}
           />
           <PlatformCard
+            href=""
             name="Library"
             description={t("Discover, Measure, Interpret Data and Insights")}
           />
           <PlatformCard
+            href=""
             name="Analytics"
             description={t("Collaborative Knowledge Sharing and Discovery")}
           />
@@ -105,12 +109,12 @@ const t = useTranslations(lang);
         description="Create content freely or by using templates aligned with various your teaching style and pedagogical strategy. Even without templates, our platform's intuitive design ensures a guided and structured content creation experience, reminiscent of familiar file systems. Collaboration is encouraged, enabling multiple contributors to create cohesive content, and easing the process for teams working collaboratively."
       />
       <div class="grid grid-cols-4 gap-2">
-        <Button>{t("How to Set Up")}</Button>
-        <Button>
+        <Button href="">{t("How to Set Up")}</Button>
+        <Button href="">
           {t("How to Manage it")}
         </Button>
         <div class="col-span-2">
-          <Button fullWidth>{t("Start Creating")}</Button>
+          <Button href="" fullWidth>{t("Start Creating")}</Button>
         </div>
       </div>
     </section>
@@ -122,12 +126,13 @@ const t = useTranslations(lang);
       description="Engage learners with an array of interactive tools and features. From assessment tools such as quizzes, tests, and open questions, to simulating real-world experiments through physics or chemistry labs, coding skill assessments with the code capsule and more! Embed multimedia content, create shared writing pads, and interact with chatbots. Our platform enables educators to engage learners effectively and in a variety of ways, ensuring a rich and educative experience both in traditional classrooms and remote learning environments."
     />
     <div class="grid grid-cols-4 gap-2">
-      <Button>{t("Player Tutorial")}</Button><Button>
+      <Button href="">{t("Player Tutorial")}</Button>
+      <Button href="">
         {t("How to add Apps")}
       </Button>
 
       <div class="col-span-2">
-        <Button fullWidth>{t("Begin Experiencing")}</Button>
+        <Button href="" fullWidth>{t("Begin Experiencing")}</Button>
       </div>
     </div>
 
@@ -137,12 +142,13 @@ const t = useTranslations(lang);
       description="Uncover invaluable insights into learner engagement and content performance through our analytics dashboard. Track access, interactions, downloads, and more, empowering educators with data-driven insights to enhance student engagement and tailor content delivery to individual classroom needs"
     />
     <div class="grid grid-cols-4 gap-2">
-      <Button variant="accent">{t("Analytics Tutorial")}</Button><Button>
+      <Button href="" variant="accent">{t("Analytics Tutorial")}</Button>
+      <Button href="">
         {t("Filter Analytics")}
       </Button>
 
       <div class="col-span-2">
-        <Button fullWidth>{t("Start Learning")}</Button>
+        <Button href="" fullWidth>{t("Start Learning")}</Button>
       </div>
     </div>
 
@@ -153,13 +159,13 @@ const t = useTranslations(lang);
       description="Collaboration lies at the heart of Graasp. Our shared library fosters a vibrant community of educators and professionals. Easily share and access content, co-create materials, and connect with fellow educators, amplifying knowledge sharing and collective learning experiences."
     />
     <div class="grid grid-cols-4 gap-2">
-      <Button>{t("How to Navigate")}</Button>
-      <Button>
+      <Button href="">{t("How to Navigate")}</Button>
+      <Button href="">
         {t("How to Publish")}
       </Button>
 
       <div class="col-span-2">
-        <Button fullWidth>{t("Explore Content")}</Button>
+        <Button href="" fullWidth>{t("Explore Content")}</Button>
       </div>
     </div>
   </main>
@@ -189,7 +195,7 @@ const t = useTranslations(lang);
         <p class="text-right">
           {t("Discover updates, enrich your Graasp experience")}
           <br />
-          <Button>{t("Visit our Blog")}</Button>
+          <Button href="">{t("Visit our Blog")}</Button>
         </p>
       </div>
     </div>

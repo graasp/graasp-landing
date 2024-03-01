@@ -3,25 +3,15 @@ import { useTranslations, getLangFromUrl } from "../../i18n/utils";
 
 import Button from "../Button.astro";
 const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 
 interface Props {
   caption: string;
   title: string;
-  description: string;
   href: string;
   buttonText: string;
-  color: string;
-  direction: "left" | "right";
+  direction?: "left" | "right";
 }
-const {
-  title,
-  description,
-  caption,
-  direction = "left",
-  href,
-  buttonText,
-} = Astro.props;
+const { title, caption, direction = "left", href, buttonText } = Astro.props;
 ---
 
 <div
@@ -40,7 +30,7 @@ const {
 
     <slot />
 
-    <Button>{buttonText}</Button>
+    <Button {href}>{buttonText}</Button>
   </div>
   <div>
     <img class="rounded-3xl" src="https://picsum.photos/200/200" />

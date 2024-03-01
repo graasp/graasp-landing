@@ -8,7 +8,7 @@ interface Props {
   title: string;
   description: string;
   caption: string;
-  direction: "left" | "right";
+  direction?: "left" | "right";
 }
 const { title, direction = "right", description, caption } = Astro.props;
 ---

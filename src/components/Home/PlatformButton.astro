@@ -1,10 +1,6 @@
 ---
 import Button from "../Button.astro";
-import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import { Icon } from "astro-icon/components";
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
 
 interface Props {
   caption: string;
@@ -13,7 +9,7 @@ interface Props {
   href: string;
   buttonText: string;
   color: "builder" | "player" | "analytics" | "library";
-  direction: "left" | "right";
+  direction?: "left" | "right";
 }
 const {
   name,

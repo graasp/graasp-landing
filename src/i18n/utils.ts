@@ -28,7 +28,12 @@ export const getLocalizedPageFromUrl = (url: URL): string => {
 };
 
 export const useTranslations = (lang: keyof typeof ui) => {
-  return function t(key: keyof (typeof ui)[typeof defaultLang]): string {
-    return ui[lang][key] || ui[defaultLang][key]|| key;
+  return function t(key: string): string {
+    // @ts-ignore
+    return ui[lang][key] || ui[defaultLang][key] || key;
   };
+
+  // return function t(key: keyof (typeof ui)[typeof defaultLang]): string {
+  //   return ui[lang][key] || ui[defaultLang][key] || key;
+  // };
 };
