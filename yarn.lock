@@ -1370,7 +1370,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-icon@npm:1.1.0":
+"astro-icon@npm:^1.1.0":
   version: 1.1.0
   resolution: "astro-icon@npm:1.1.0"
   dependencies:
@@ -2807,7 +2807,7 @@ __metadata:
     "@astrojs/partytown": "npm:2.0.4"
     "@astrojs/tailwind": "npm:5.1.0"
     astro: "npm:4.4.7"
-    astro-icon: "npm:1.1.0"
+    astro-icon: "npm:^1.1.0"
     daisyui: "npm:^4.4.2"
     prettier: "npm:^3.1.0"
     prettier-plugin-astro: "npm:^0.12.2"

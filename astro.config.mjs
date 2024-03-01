@@ -9,13 +9,13 @@ export default defineConfig({
   // base: "/beta",
   site: "https://graasp.org",
   integrations: [
-    icon(),
     tailwind(),
     partytown({
       config: {
         forward: ["dataLayer.push"],
       },
     }),
+    icon(),
   ],
   i18n: {
     defaultLocale: "en",
