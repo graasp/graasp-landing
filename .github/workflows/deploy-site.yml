@@ -6,15 +6,25 @@ on:
       - "main"
 
   workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Target environment'
+        type: environment
+        required: true
+        default: dev
+
+permissions:
+  id-token: write # This is required for requesting the JWT
+  contents: read # This is required for actions/checkout
 
 jobs:
-  deploy-app-to-prod:
-    name: Deploy to production
+  deploy-app:
+    name: Deploy to (${{ inputs.environment || 'dev'}})
     runs-on: ubuntu-latest
-    environment: production
+    environment: ${{ inputs.environment || 'dev' }}
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Yarn install and Cache dependencies
         uses: graasp/graasp-deploy/.github/actions/yarn-install-and-cache@v1
@@ -22,15 +32,16 @@ jobs:
       - name: Yarn build
         # Set environment variables required to perform the build. These are only available to this step
         env:
-          GA_MEASUREMENT_ID: ${{ secrets.REACT_APP_GA_MEASUREMENT_ID_PROD }}
+          GA_MEASUREMENT_ID: ${{ inputs.environment == 'production' && secrets.REACT_APP_GA_MEASUREMENT_ID_PROD || '' }}
         run: yarn build
         shell: bash
 
       - name: Deploy
-        uses: graasp/graasp-deploy/.github/actions/deploy-s3@v1
+        uses: graasp/graasp-deploy/.github/actions/deploy-s3@main
         # Replace input build-folder or version if needed
         with:
           build-folder: 'dist'
+          role-to-assume: ${{ secrets.AWS_ROLE }}
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ vars.AWS_REGION }}
