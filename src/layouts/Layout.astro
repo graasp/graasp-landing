@@ -37,7 +37,7 @@ const t = useTranslations(lang);
       type="font/truetype"
       cross-origin="anonymous"
     />
-    <!-- partitown script -->
+    <!-- partytown script -->
     <script
       is:inline
       type="text/partytown"
@@ -56,9 +56,9 @@ const t = useTranslations(lang);
 
   <body>
     <Header />
+    <!-- start main content -->
+    <slot />
   </body>
-  <!-- start main content -->
-  <slot />
   <!-- end main content -->
   <Footer />
 </html>
