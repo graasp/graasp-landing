@@ -1,0 +1,81 @@
+---
+const TEAM = [
+  {
+    name: "Denis Gillet",
+    image: "denis.png",
+    role: "ASSOCIATION.TITLE_PRESIDENT",
+  },
+  {
+    name: "Isabelle Vonèche Cardia",
+    image: "isabelle.jpg",
+    role: "ASSOCIATION.TITLE_MANAGING_DIRECTOR",
+  },
+  {
+    name: "María Jesús Rodríguez-Triana",
+    image: "maria.jpg",
+    role: "ASSOCIATION.TITLE_VP_RESEARCH",
+  },
+  {
+    name: "Juan Carlos Farah",
+    image: "juancarlos.jpg",
+    role: "ASSOCIATION.TITLE_VP_PRODUCT",
+  },
+  {
+    name: "Kim Lan Phan Hoang",
+    image: "kim.jpg",
+    role: "ASSOCIATION.TITLE_VP_ENGINEERING",
+  },
+  {
+    name: "Jérémy La Scala",
+    image: "jeremy.jpg",
+    role: "ASSOCIATION.TITLE_VP_OUTREACH",
+  },
+  {
+    name: "Sandy Ingram",
+    image: "sandy.jpg",
+    role: "ASSOCIATION.TITLE_VP_INNOVATION",
+  },
+  {
+    name: "Basile Spaenlehauer",
+    image: "basile.jpg",
+    role: "ASSOCIATION.TITLE_VP_TECHNOLOGY",
+  },
+  {
+    name: "Michele Notari",
+    image: "michele.jpg",
+    role: "ASSOCIATION.TITLE_VP_EDUCATION_AND_CONTENT",
+  },
+  {
+    name: "Hagop Taminian",
+    image: "hagop.jpg",
+    role: "ASSOCIATION.TITLE_SOFTWARE_ENGINEER",
+  },
+  {
+    name: "Philippe Kobel",
+    image: "philippe.jpg",
+    role: "ASSOCIATION.TITLE_AMBASSADOR",
+  },
+  {
+    name: "François Bierlaire",
+    image: "francois.jpg",
+    role: "TITLE_PEDAGOGICAL_ENGINEER",
+  },
+];
+---
+
+<div class="grid grid-cols-4 gap-4">
+  {
+    TEAM.map(({ name, image, role }) => (
+      <div>
+        <img
+          src={`/team/` + image}
+          alt={name}
+          class="rounded-full aspect-square p-5"
+        />
+
+        <p class="font-bold">{name}</p>
+        <p>{role}</p>
+      </div>
+    ))
+  }
+</div>
