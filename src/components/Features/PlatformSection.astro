@@ -18,20 +18,29 @@ const { title, direction = "right", description, caption } = Astro.props;
     "flex",
     "gap-4",
     "my-4",
-    direction === "left" ? "flex-row-reverse" : "",
+    direction === "left" ? "md:flex-row-reverse" : "",
+    "max-md:flex-col",
   ]}
 >
   <div class="flex-none">
-    <img class="rounded-3xl" src="https://picsum.photos/150/200" />
+    <img
+      class="rounded-3xl m-auto w-full min-w-[200px]"
+      src="https://picsum.photos/100/100"
+    />
   </div>
-  <div class="flex-1">
-    <p class:list={[direction === "left" ? "text-left" : "text-right"]}>
+  <div
+    class:list={[
+      "flex-1",
+      direction === "left" ? "md:text-left" : "md:text-right",
+    ]}
+  >
+    <p class="max-md:text-center">
       {caption}
     </p>
-    <h3 class:list={[direction === "left" ? "text-left" : "text-right"]}>
+    <h3 class="max-md:text-center">
       {title}
     </h3>
-    <p class:list={[direction === "left" ? "text-left" : "text-right"]}>
+    <p>
       {description}
     </p>
   </div>
