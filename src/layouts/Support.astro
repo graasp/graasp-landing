@@ -1,12 +1,13 @@
 ---
 import Layout from "./Layout.astro";
 import { useTranslations, type UILanguages } from "../i18n/utils";
-import PlatformCard from "../components/Features/PlatformCard.astro";
-import PlatformSection from "../components/Features/PlatformSection.astro";
-// import PremiumPlansTable from "../components/Features/PremiumPlansTable.astro";
-import SubscribeSection from "../components/SubscribeSection.astro";
+import BuilderTutorialCards from "../components/Support/BuilderTutorialCards.astro";
+import PlayerTutorialCards from "../components/Support/PlayerTutorialCards.astro";
+import LibraryTutorialCards from "../components/Support/LibraryTutorialCards.astro";
+import FaqAccordion from "../components/Support/FaqAccordion.astro";
 import Button from "../components/Button.astro";
 import { Icon } from "astro-icon/components";
+import GeneralTutorialCards from "../components/Support/GeneralTutorialCards.astro";
 type Props = {
   lang: UILanguages;
 };
@@ -42,14 +43,27 @@ const t = useTranslations(lang);
           For any additional or specific question, please fill the contact form
           and we will answer to you.
         </p>
+
+        <FaqAccordion />
       </section>
     </section>
 
     <section>
       <h2>{t("Tutorials")}</h2>
+      <p>
+        Master the Platform's Functionality: here’s a collection of our detailed
+        tutorials and guides, designed to help you get the most out of Graasp's
+        functionalities.
+      </p>
+
+      <GeneralTutorialCards />
+
       <h3>{t("Builder Tutorials")}</h3>
+      <BuilderTutorialCards />
       <h3>{t("Player Tutorials")}</h3>
+      <PlayerTutorialCards />
       <h3>{t("Library Tutorials")}</h3>
+      <LibraryTutorialCards />
     </section>
 
     <section>

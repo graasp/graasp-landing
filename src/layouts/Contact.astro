@@ -1,0 +1,93 @@
+---
+import Layout from "./Layout.astro";
+import { useTranslations, type UILanguages } from "../i18n/utils";
+import Button from "../components/Button.astro";
+import SocialLink from "../components/SocialLink.astro";
+import { Icon } from "astro-icon/components";
+type Props = {
+  lang: UILanguages;
+};
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<Layout title="Contact" description={t("meta.description")} {lang}>
+  <main>
+    <section>
+      <h2>{t("Contact Us")}</h2>
+      <div class="bg-graaspLight p-10 rounded-xl">
+        <label for="html">Subject</label><br />
+        <input
+          type="text"
+          placeholder="Subject"
+          class="input input-bordered w-full max-w-xs p-2"
+        />
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <div class="grow">
+            <label for="html">First Name</label><br />
+            <input
+              type="text"
+              placeholder="First Name"
+              class="input input-bordered w-full max-w-xs p-2"
+            />
+          </div>
+          <div class="grow">
+            <label for="html">Last Name</label><br />
+            <input
+              type="text"
+              placeholder="Last Name"
+              class="input input-bordered w-full max-w-xs p-2"
+            />
+          </div>
+        </div>
+        <label for="html">E-mail Address</label><br />
+        <input
+          type="text"
+          placeholder="E-mail Address"
+          class="input input-bordered w-full max-w-xs p-2"
+        />
+
+        <label for="html">Your Message</label><br />
+        <textarea
+          class="block textarea textarea-bordered h-24 rounded-lg p-2 w-full max-w-xs"
+          placeholder="Content"></textarea>
+
+        <div class="text-center">
+          <Button>Send Form</Button>
+        </div>
+      </div>
+
+      <p>
+        If you want to keep yourself updated on Graasp’s progresses, do not
+        forget to follow us here:
+      </p>
+      <div class="flex flex-col sm:flex-row gap-8 justify-center">
+        <SocialLink href="https://www.facebook.com/graasp">
+          <Icon name="facebook" slot="icon" class="w-6 h-6" />
+        </SocialLink>
+        <SocialLink href="https://twitter.com/graasp">
+          <Icon name="twitter" slot="icon" class="w-6 h-6" />
+        </SocialLink>
+        <SocialLink href="https://www.facebook.com/graasp">
+          <Icon name="instagram" slot="icon" class="w-6 h-6" />
+        </SocialLink>
+        <SocialLink href="https://www.linkedin.com/company/graasp">
+          <Icon name="linkedin" slot="icon" class="w-6 h-6" />
+        </SocialLink>
+        <SocialLink href="https://github.com/graasp">
+          <Icon name="github" slot="icon" class="w-6 h-6" />
+        </SocialLink>
+        <SocialLink href="https://tooting.ch/@graasp">
+          <Icon name="mastodon" slot="icon" class="w-6 h-6" />
+        </SocialLink>
+      </div>
+
+      <style>
+        main {
+          @apply grow bg-blue-50 text-black;
+        }
+      </style>
+    </section>
+  </main>
+</Layout>

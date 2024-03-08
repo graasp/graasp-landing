@@ -1,0 +1,35 @@
+---
+import TutorialCard from "./TutorialCard.astro";
+
+const tutorials = [
+  {
+    title: "Create New Project",
+    description:
+      "Descriptive title of the tutorial, which could take more lines",
+    buttonTitle: "Read Tutorial X",
+    href: "",
+  },
+  {
+    title: "Create New Project",
+    description:
+      "Descriptive title of the tutorial, which could take more lines",
+    buttonTitle: "Read Tutorial X",
+    href: "",
+  },
+];
+---
+
+<div class="grid grid-flow-col gap-6 rounded-xl">
+  {
+    tutorials.map(({ title, description, buttonTitle, href }) => (
+      <TutorialCard
+        title={title}
+        description={description}
+        buttonTitle={buttonTitle}
+        href={href}
+        fullWidth
+        buttonVariant="primary"
+      />
+    ))
+  }
+</div>

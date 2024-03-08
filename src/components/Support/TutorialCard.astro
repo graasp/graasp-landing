@@ -1,0 +1,20 @@
+---
+import Button from "../Button.astro";
+
+const {
+  title,
+  description,
+  href,
+  buttonTitle,
+  fullWidth,
+  buttonVariant = "accent",
+} = Astro.props;
+---
+
+<div class="text-center bg-white rounded-lg p-4">
+  <p class="font-bold">{title}</p>
+  <p>{description}</p>
+  <Button {fullWidth} {href} variant={buttonVariant}>
+    {buttonTitle}
+  </Button>
+</div>
