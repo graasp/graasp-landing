@@ -8,6 +8,6 @@ const { name, label, placeholder } = Astro.props;
 ---
 
 <>
-  <label for={name}>{label}</label>
+  <label class="text-left" for={name}>{label}</label>
   <input class="p-2 rounded-xl" {placeholder} id={name} />
 </>

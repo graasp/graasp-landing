@@ -19,20 +19,29 @@ const { title, caption, direction = "left", href, buttonText } = Astro.props;
     "flex",
     "gap-10",
     "my-4",
-    direction === "left" ? "flex-row-reverse" : "",
+    direction === "left" ? "md:flex-row-reverse" : "md:flex-row",
+    "flex-col-reverse",
   ]}
 >
   <div class="grow">
-    <p>
-      {caption}
-    </p>
-    <h2>{title}</h2>
+    <div
+      class:list={[
+        "text-left",
+        direction === "left" ? "md:text-right" : "md:text-left",
+      ]}
+    >
+      <p>
+        {caption}
+      </p>
+      <h2>
+        {title}
+      </h2>
 
-    <slot />
-
-    <Button {href}>{buttonText}</Button>
+      <slot />
+      <Button {href}>{buttonText}</Button>
+    </div>
   </div>
   <div>
-    <img class="rounded-3xl" src="https://picsum.photos/200/200" />
+    <img class="m-auto rounded-3xl" src="https://picsum.photos/200/200" />
   </div>
 </div>

@@ -21,58 +21,58 @@ const t = useTranslations(lang);
   <main>
     <SplashSection />
     <section>
-      <div class="grid grid-rows-1 grid-flow-col gap-10 my-20">
-        <div class="flex flex-row gap-5">
-          <div class="flex flex-col justify-evenly">
-            <PlatformButton
-              href=""
-              caption={t("Use the")}
-              name="Builder"
-              color="builder"
-              buttonText={t("Create")}
-              description={t("To create rich and interactive material")}
-            />
-            <PlatformButton
-              href=""
-              caption={t("Use the")}
-              name="Player"
-              color="player"
-              buttonText={t("Experience")}
-              description={t("And let learners access material in a new way")}
-            />
-          </div>
-          <div class="text-center mx-10">
-            <h2>{t("An all-in-one tool, how?")}</h2>
-            <BuilderPuzzle />
-          </div>
-          <div class="flex flex-col justify-evenly">
-            <PlatformButton
-              href=""
-              caption={t("Access the")}
-              name="Analytics"
-              direction="right"
-              color="analytics"
-              buttonText={t("Analyze")}
-              description={t("To collect insights and data about your class")}
-            />
-            <PlatformButton
-              href=""
-              caption={t("Navigate the")}
-              name="Library"
-              direction="right"
-              color="library"
-              buttonText={t("Explore")}
-              description={t("To find resources and be part of a community")}
-            />
-          </div>
+      <div class="grid grid-flow-row lg:grid-cols-6 gap-10 my-20">
+        <div class="lg:order-1 lg:col-span-4 text-center mx-10">
+          <h2>{t("An all-in-one tool, how?")}</h2>
+          <BuilderPuzzle />
+        </div>
+        <div class="grid lg:order-0 max-lg:grid-cols-2 lg:grid-flow-row gap-4">
+          <PlatformButton
+            href=""
+            caption={t("Use the")}
+            name="Builder"
+            color="builder"
+            buttonText={t("Create")}
+            description={t("To create rich and interactive material")}
+          />
+          <PlatformButton
+            href=""
+            caption={t("Use the")}
+            name="Player"
+            color="player"
+            buttonText={t("Experience")}
+            description={t("And let learners access material in a new way")}
+          />
+        </div>
+        <div class="grid lg:order-2 max-lg:grid-cols-2 lg:grid-flow-row gap-4">
+          <PlatformButton
+            href=""
+            caption={t("Access the")}
+            name="Analytics"
+            direction="right"
+            color="analytics"
+            buttonText={t("Analyze")}
+            description={t("To collect insights and data about your class")}
+          />
+          <PlatformButton
+            href=""
+            caption={t("Navigate the")}
+            name="Library"
+            direction="right"
+            color="library"
+            buttonText={t("Explore")}
+            description={t("To find resources and be part of a community")}
+          />
         </div>
       </div>
     </section>
 
-    <Button href="">
-      {t("Are you a teacher?")}
-    </Button>
-    <Button href="">{t("Are you a researcher?")}</Button>
+    <div class="text-center">
+      <Button href="">
+        {t("Are you a teacher?")}
+      </Button>
+      <Button href="">{t("Are you a researcher?")}</Button>
+    </div>
 
     <section>
       <UserStorySection
@@ -81,7 +81,6 @@ const t = useTranslations(lang);
           "Are you a teacher wanting to enhance your content creation?",
         )}
         buttonText={t("Start Today")}
-        direction="right"
         title={t("Build your material with Graasp, a structured way to…")}
       >
         <p>
@@ -95,9 +94,10 @@ const t = useTranslations(lang);
         </p>
       </UserStorySection>
       <UserStorySection
+        direction="right"
         href=""
         caption={t(
-          "Are you a researcher seeking a platform that seamlessly integrates data collection and interactive epxeriences?",
+          "Are you a researcher seeking a platform that seamlessly integrates data collection and interactive experiences?",
         )}
         buttonText={t("Register Now")}
         title={t("Start using Graasp for your research")}
