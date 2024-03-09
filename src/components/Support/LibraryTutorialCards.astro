@@ -1,0 +1,61 @@
+---
+import TutorialCard from "./TutorialCard.astro";
+
+const tutorials = [
+  {
+    title: "Create New Project",
+    description:
+      "Descriptive title of the tutorial, which could take more lines",
+    buttonTitle: "Read Tutorial X",
+    href: "",
+  },
+  {
+    title: "Create New Project",
+    description:
+      "Descriptive title of the tutorial, which could take more lines",
+    buttonTitle: "Read Tutorial X",
+    href: "",
+  },
+  {
+    title: "Create New Project",
+    description:
+      "Descriptive title of the tutorial, which could take more lines",
+    buttonTitle: "Read Tutorial X",
+    href: "",
+  },
+  {
+    title: "Create New Project",
+    description:
+      "Descriptive title of the tutorial, which could take more lines",
+    buttonTitle: "Read Tutorial X",
+    href: "",
+  },
+  {
+    title: "Create New Project",
+    description:
+      "Descriptive title of the tutorial, which could take more lines",
+    buttonTitle: "Read Tutorial X",
+    href: "",
+  },
+  {
+    title: "Create New Project",
+    description:
+      "Descriptive title of the tutorial, which could take more lines",
+    buttonTitle: "Read Tutorial X",
+    href: "",
+  },
+];
+---
+
+<div class="grid grid-cols-4 gap-6 rounded-xl">
+  {
+    tutorials.map(({ title, description, buttonTitle, href }) => (
+      <TutorialCard
+        title={title}
+        description={description}
+        buttonTitle={buttonTitle}
+        href={href}
+      />
+    ))
+  }
+</div>

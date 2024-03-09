@@ -1,0 +1,129 @@
+---
+import Layout from "./Layout.astro";
+import { useTranslations, type UILanguages } from "../i18n/utils";
+import NumberCard from "../components/About/NumberCard.astro";
+import Graasp from "../assets/graasp-hand.svg";
+import PlatformSection from "../components/Features/PlatformSection.astro";
+// import PremiumPlansTable from "../components/Features/PremiumPlansTable.astro";
+import Button from "../components/Button.astro";
+import Image from "astro/components/Image.astro";
+import TeamMembers from "../components/About/TeamMembers.astro";
+type Props = {
+  lang: UILanguages;
+};
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<Layout title="About Us" description={t("meta.description")} {lang}>
+  <main>
+    <section>
+      <h2>{t("Nice to see you! Meet the people behind Graasp")}</h2>
+      <div class="grid grid-rows-1 grid-flow-col gap-6">
+        <div>
+          <p>
+            {
+              t(
+                "Founded by a dedicated team of professionals, our mission is to bridge the gap between cutting-edge technology and education, empowering educators and researchers globally.",
+              )
+            }
+          </p>
+          <ul class="list-disc list-inside">
+            <li>Aiming at meeting our Users Needs</li>
+            <li>Prioritizing Data Security andPrivacy Compliance</li>
+            <li>
+              Committed to Accessibility, Security, andContinuous Improvement
+            </li>
+          </ul>
+          <p>
+            {
+              t(
+                "We aim to bridge the gap between research environments and traditional educational settings such as schools. We envision a future where Graasp empowers educators and students in traditional educational setups and more, revolutionizing teaching methodologies and fostering engaging learning experiences.",
+              )
+            }
+          </p>
+        </div>
+        <div>
+          <Image alt="graasp logo" loading="eager" class="logo" src={Graasp} />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <NumberCard number="6000" title="Builder" />
+        <NumberCard number="123+" title="Library's projects" />
+        <NumberCard number="20+" title="Templates" />
+        <NumberCard number="12" title="Apps" />
+      </div>
+    </section>
+
+    <section>
+      <h2>{t("Graasp Association")}</h2>
+
+      <p>
+        {
+          t(
+            "Graasp is more than a Learning Experience Platform. It is a product behind which there is a Swiss Non-Profit Organization dedicated to advancing digital education. Our primary goal is to support educators and researchers every step of the way, providing help and training to achieve their objectives effectively.",
+          )
+        }
+      </p>
+
+      <section>
+        <h3 class="text-left">{t("Other projects")}</h3>
+
+        <div class="grid grid-flow-col lg:grid-cols-3 gap-8">
+          <div class="bg-primary p-2 rounded-xl text-center">
+            <p>Helvetas</p>
+            <p>
+              Collaborative digital platform for training young people on
+              migration routes
+            </p>
+          </div>
+          <div class="bg-primary p-2 rounded-xl text-center">
+            <p>Climate</p>
+            <p>
+              Active learning simulations for investigating the science of
+              global warming
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="text-center">
+        <Button variant="accent" href="">
+          Visit the Association's Website
+        </Button>
+      </div>
+    </section>
+
+    <section>
+      <h2>{t("Meet the team!")}</h2>
+
+      <TeamMembers />
+    </section>
+
+    <section>
+      <h2 class="max-lg:text-center">
+        {t("Take a look at our presentation video")}
+      </h2>
+
+      <video class="m-auto" width="420" height="340" controls>
+        <source src="movie.mp4" type="video/mp4" />
+        <source src="movie.ogg" type="video/ogg" />
+         Your browser does not support the video tag.
+      </video>
+
+      <div
+        class="text-center grid grid-flow-row md:grid-flow-col justify-center"
+      >
+        <Button variant="primary" href="">Join our Community</Button>
+        <Button variant="accent" href="">Explore the Library</Button>
+      </div>
+    </section>
+  </main>
+
+  <style>
+    main {
+      @apply grow bg-blue-50 text-black;
+    }
+  </style>
+</Layout>

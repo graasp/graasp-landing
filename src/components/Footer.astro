@@ -1,0 +1,81 @@
+---
+import LinkButton from "../components/LinkButton.astro";
+import ExternalLink from "../components/ExternalLink.astro";
+import MailLink from "../components/MailLink.astro";
+import SocialLink from "../components/SocialLink.astro";
+import { Icon } from "astro-icon/components";
+import FooterSection from "../components/FooterSection.astro";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<footer class="flex flex-col gap-1 bg-primary">
+  <p class="text-center">
+    {t("footer.description")}
+    <a class="underline" href="https://association.graasp.org"
+      >{t("footer.description.association")}</a
+    >
+  </p>
+  <div class="flex flex-col sm:flex-row m-4 gap-10">
+    <FooterSection name={t("footer.partners.title")}>
+      <ExternalLink href="https://epfl.ch">EPFL</ExternalLink>
+      <ExternalLink href="https://edtech-collider.ch">
+        Swiss EdTech Collider
+      </ExternalLink>
+      <ExternalLink href="https://www.golabz.eu">Go-Lab</ExternalLink>
+      <ExternalLink href="https://d-skills.ch/">
+        Swiss Digital Skills Academy
+      </ExternalLink>
+      <ExternalLink href="https://www.ihub4schools.eu/">
+        iHub4Schools
+      </ExternalLink>
+      <ExternalLink href="https://belearn.swiss/en/">BeLEARN</ExternalLink>
+      <ExternalLink href="https://go-ga.org/">GO-GA</ExternalLink>
+    </FooterSection>
+    <FooterSection name={t("footer.social.title")}>
+      <SocialLink href="https://www.facebook.com/graasp">
+        <Icon name="facebook" slot="icon" class="w-6 h-6" />
+        <span>Facebook</span>
+      </SocialLink>
+      <SocialLink href="https://twitter.com/graasp">
+        <Icon name="twitter" slot="icon" class="w-6 h-6" />
+        <span>Twitter</span>
+      </SocialLink>
+      <SocialLink href="https://www.facebook.com/graasp">
+        <Icon name="instagram" slot="icon" class="w-6 h-6" />
+        <span>Instagram</span>
+      </SocialLink>
+      <SocialLink href="https://www.linkedin.com/company/graasp">
+        <Icon name="linkedin" slot="icon" class="w-6 h-6" />
+        <span>LinkedIn</span>
+      </SocialLink>
+      <SocialLink href="https://github.com/graasp">
+        <Icon name="github" slot="icon" class="w-6 h-6" />
+        <span>GitHub</span>
+      </SocialLink>
+      <SocialLink href="https://tooting.ch/@graasp">
+        <Icon name="mastodon" slot="icon" class="w-6 h-6" />
+        <span>Mastodon</span>
+      </SocialLink>
+    </FooterSection>
+    <FooterSection name={t("Other")}>
+      <ExternalLink href={t("footer.support.tutorials.link")}>
+        {t("Termns of Service")}
+      </ExternalLink>
+      <ExternalLink href="https://graasp.github.io/docs/">
+        {t("Privacy Policy")}
+      </ExternalLink>
+      <ExternalLink
+        href="https://portal.klewel.com/watch/webcast/swiss-edtech-collider-april-2017/talk/2/"
+      >
+        {t("Disclaimer")}
+      </ExternalLink>
+    </FooterSection>
+  </div>
+  <p class="copyright text-center">
+    &copy; Graasp 2014 - {new Date().getFullYear()}
+  </p>
+</footer>

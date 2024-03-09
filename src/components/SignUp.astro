@@ -11,7 +11,10 @@ const t = useTranslations(lang);
 <a
   href="https://auth.graasp.org/signup"
   class:list={[
-    "btn btn-accent text-white",
+    "btn btn-primary text-white",
     size === "small" ? "btn-sm" : "btn-lg text-xl",
-  ]}>{t("action.signUp")}</a
->
+  ]}
+  ><slot>
+    {t("action.signUp")}
+  </slot>
+</a>

@@ -1,0 +1,17 @@
+---
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+interface Props {
+  number: string;
+  title: string;
+}
+const { number, title } = Astro.props;
+---
+
+<div class="text-center bg-primary rounded-3xl p-5">
+  <p class="text-4xl">{number}</p>
+  <p>{title}</p>
+</div>

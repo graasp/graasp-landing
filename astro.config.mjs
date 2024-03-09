@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
+import icon from "astro-icon";
 
 import partytown from "@astrojs/partytown";
 
@@ -14,12 +15,11 @@ export default defineConfig({
         forward: ["dataLayer.push"],
       },
     }),
+    icon(),
   ],
-  experimental: {
-    i18n: {
-      defaultLocale: "en",
-      locales: ["en", "fr", "de", "es"],
-      // routingStrategy: "prefix-always",
-    },
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "fr", "de", "es"],
+    // routingStrategy: "prefix-always",
   },
 });

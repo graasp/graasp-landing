@@ -1,5 +1,5 @@
 ---
-import Icon from "astro-icon";
+import { Icon } from "astro-icon/components";
 
 interface Props {
   iconName: string;
@@ -14,8 +14,12 @@ const { iconName, bgColor } = Astro.props;
     bgColor,
   ]}
 >
-  <Icon name={iconName} width={150} class="w-30" />
-  <div class="text-alternate flex flex-col text-2xl max-w-[400px]">
+  <Icon name={iconName} font-size="10rem" />
+  <div class="text-alternate
+    flex
+    flex-col
+    text-2xl
+    max-w-[400px]">
     <slot />
   </div>
 </section>

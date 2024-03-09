@@ -1,0 +1,31 @@
+---
+import Input from "./Input.astro";
+import Button from "./Button.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="flex flex-col mt-5 bg-graaspLight m-4 p-10 rounded-3xl">
+  <div
+    class="grid grid-rows-1 text-center md:text-left grid-flow-row md:grid-flow-col gap-6"
+  >
+    <div>
+      <p>{t("Do you wanna be updated?")}</p>
+      <h3>{t("Subscribe to our newsletter!")}</h3>
+    </div>
+    <div class="flex flex-col gap-2">
+      <div class="grid grid-flow-row gap-1">
+        <Input
+          name="email"
+          label={t("Email Address")}
+          placeholder={t("Write your email address")}
+        />
+      </div>
+      <Button href="">{t("Subscribe")}</Button>
+    </div>
+  </div>
+</section>
+
+<style></style>

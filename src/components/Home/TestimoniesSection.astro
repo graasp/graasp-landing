@@ -1,0 +1,74 @@
+---
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import Button from "../Button.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section>
+  <h2 class="text-center">{t("What our users say about us")}</h2>
+  <div class="w-full">
+    <div class="bg-black h-[100px] w-full relative"></div>
+    <div class="grid grid-cols-5 gap-4 pt-4 px-5 relative bottom-20">
+      <div class="card">
+        <img class="rounded-full avatar" src="https://picsum.photos/50/50" />
+
+        <p class="name">{t("Hannah")}</p>
+        <p>{t("I love using Graasp to share content with my students!")}</p>
+      </div>
+      <div class="card">
+        <img class="rounded-full avatar" src="https://picsum.photos/50/50" />
+
+        <p class="name">{t("Hannah")}</p>
+        <p>{t("I love using Graasp to share content with my students!")}</p>
+      </div>
+      <div class="card">
+        <img class="rounded-full avatar" src="https://picsum.photos/50/50" />
+
+        <p class="name">{t("Hannah")}</p>
+        <p>{t("I love using Graasp to share content with my students!")}</p>
+      </div>
+      <div class="card">
+        <img class="rounded-full avatar" src="https://picsum.photos/50/50" />
+
+        <p class="name">{t("Hannah")}</p>
+        <p>{t("I love using Graasp to share content with my students!")}</p>
+      </div>
+      <div class="card">
+        <img class="rounded-full avatar" src="https://picsum.photos/50/50" />
+
+        <p class="name">{t("Hannah")}</p>
+        <p>{t("I love using Graasp to share content with my students!")}</p>
+      </div>
+    </div>
+  </div>
+  <p class="text-center py-2">
+    {
+      t(
+        "Join us at Graasp and embark on a transformative journey in education and professional development!",
+      )
+    }
+    <div class="py-1 text-center">
+      <Button href="">{t("Sign Up")}</Button>
+      <Button href="">{t("Visit the Library")}</Button>
+    </div>
+  </p>
+</section>
+
+<style>
+  .card {
+    @apply bg-base-100;
+    text-align: center;
+    padding: 10px 10px;
+  }
+
+  .card .avatar {
+    width: 50px;
+    margin: 0 auto;
+  }
+
+  .card .name {
+    font-weight: bold;
+  }
+</style>

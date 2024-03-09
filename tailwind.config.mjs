@@ -1,17 +1,25 @@
 const graasp = "#5050d2";
-const player = "#009EFF";
-const builder = "#1ECAA5";
-const library = "#9300C6";
-const analytics = "#F2B14F";
+const player = "#56B0F8";
+const builder = "#00C38B";
+const library = "#C658D0";
+const analytics = "#FA5B7D";
 const account = "#0707A3";
 const graaspDark = "#0707A3";
-const graaspLight = "#7873D8";
+const graaspLight = "#E4DFFF";
 const accentDark = "#61399A";
+const secondary = "#E4DFFF";
+const secondaryContent = "#00639A";
+const accent = "#CEE5FF";
+const accentContent = "#00639A";
 
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
+    fontFamily: {
+      sans: ["Nunito", "sans-serif"],
+      serif: ["Nunito", "sans-serif"],
+    },
     extend: {
       colors: {
         graasp,
@@ -23,6 +31,8 @@ export default {
         graaspDark,
         graaspLight,
         accentDark,
+        background: "#FCF8FF",
+        playButtons: "#0A0623",
       },
     },
   },
@@ -32,10 +42,16 @@ export default {
       {
         mytheme: {
           primary: graasp,
-          // secondary: graaspAccent,
-          accent: player,
+          secondary,
+          accent,
+          accentContent,
           neutral: "#3d4451",
-          "base-100": "#ffffff",
+
+          "base-100": "#fefefe",
+
+          // spacing: {
+          //   test: "5px",
+          // },
         },
       },
     ],

@@ -1,0 +1,120 @@
+---
+import Layout from "./Layout.astro";
+import { useTranslations, type UILanguages } from "../i18n/utils";
+import BuilderTutorialCards from "../components/Support/BuilderTutorialCards.astro";
+import PlayerTutorialCards from "../components/Support/PlayerTutorialCards.astro";
+import LibraryTutorialCards from "../components/Support/LibraryTutorialCards.astro";
+import FaqAccordion from "../components/Support/FaqAccordion.astro";
+import Button from "../components/Button.astro";
+import { Icon } from "astro-icon/components";
+import GeneralTutorialCards from "../components/Support/GeneralTutorialCards.astro";
+type Props = {
+  lang: UILanguages;
+};
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<Layout title="Support" description={t("meta.description")} {lang}>
+  <main>
+    <section>
+      <h2>{t("Get Started")}</h2>
+      <div class="grid grid-rows-1 grid-flow-col gap-6">
+        <div>
+          <p>
+            {
+              t(
+                "Welcome! Explore our support resources access the support you need. We're committed to ensuring your success with our platform. ",
+              )
+            }
+          </p>
+        </div>
+      </div>
+
+      <section>
+        <h3>{t("FAQ")}</h3>
+
+        <p>
+          Here are our most Frequently Asked Questions for you to find quick
+          solutions to commonly shared doubts and challenges within the
+          community.
+        </p>
+        <p>
+          For any additional or specific question, please fill the contact form
+          and we will answer to you.
+        </p>
+
+        <FaqAccordion />
+      </section>
+    </section>
+
+    <section>
+      <h2>{t("Tutorials")}</h2>
+      <p>
+        Master the Platform's Functionality: here’s a collection of our detailed
+        tutorials and guides, designed to help you get the most out of Graasp's
+        functionalities.
+      </p>
+
+      <GeneralTutorialCards />
+
+      <h3>{t("Builder Tutorials")}</h3>
+      <BuilderTutorialCards />
+      <h3>{t("Player Tutorials")}</h3>
+      <PlayerTutorialCards />
+      <h3>{t("Library Tutorials")}</h3>
+      <LibraryTutorialCards />
+    </section>
+
+    <section>
+      <h2>{t("Developers")}</h2>
+
+      <p class="font-bold">
+        Are you interested in developing? Embrace Open Education with Graasp!
+      </p>
+      <p>
+        At Graasp, we believe in the power of free software as much as we
+        believe in open education. For this reason, we share the code of our
+        services on GitHub, and invite developers to join us in our mission to
+        shape the landscape of digital education
+      </p>
+      <div class="card border border-violet-500 p-2">
+        <div class="grid grid-flow-col gap-2 rounded-xl">
+          <div>
+            <p class="font-bold">Open Learning</p>
+            <p>
+              Visit our repository on GitHub where we actively collaborate and
+              share code, fostering a community-driven approach to education.
+              Connect with the team if you want to start collaborating!
+            </p>
+          </div>
+          <div class="text-center">
+            <div class="grid grid-flow-col gap-2 justify-center gap-4">
+              <Icon name="github" slot="icon" class="w-6 h-6 text-red-500" />
+              <Icon name="github" slot="icon" class="w-6 h-6 text-red-500" />
+            </div>
+            <p>Want to collaborate?</p>
+            <Button href="">Visit Repository</Button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-white p-10 text-center rounded-3xl my-10">
+      <h2>{t("Need help? Contact us")}</h2>
+
+      <p>
+        Do not hesitate to contact us for any need or issue that you might be
+        having! We are happy to answer your doubts and curiosities.
+      </p>
+
+      <Button href="">Go to the Contact Form</Button>
+    </section>
+  </main>
+
+  <style>
+    main {
+      @apply grow bg-blue-50 text-black;
+    }
+  </style>
+</Layout>
