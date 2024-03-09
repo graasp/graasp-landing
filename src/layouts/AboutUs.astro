@@ -48,7 +48,7 @@ const t = useTranslations(lang);
         </div>
       </div>
 
-      <div class="grid grid-flow-col grid-cols-4 gap-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
         <NumberCard number="6000" title="Builder" />
         <NumberCard number="123+" title="Library's projects" />
         <NumberCard number="20+" title="Templates" />
@@ -70,7 +70,7 @@ const t = useTranslations(lang);
       <section>
         <h3 class="text-left">{t("Other projects")}</h3>
 
-        <div class="grid grid-flow-col grid-cols-4 gap-8">
+        <div class="grid grid-flow-col lg:grid-cols-3 gap-8">
           <div class="bg-primary p-2 rounded-xl text-center">
             <p>Helvetas</p>
             <p>
@@ -88,7 +88,9 @@ const t = useTranslations(lang);
         </div>
       </section>
 
-      <Button variant="accent">Visit the Association's Website</Button>
+      <div class="text-center">
+        <Button variant="accent">Visit the Association's Website</Button>
+      </div>
     </section>
 
     <section>
@@ -98,7 +100,9 @@ const t = useTranslations(lang);
     </section>
 
     <section>
-      <h2>{t("Take a look at our presentation video")}</h2>
+      <h2 class="max-lg:text-center">
+        {t("Take a look at our presentation video")}
+      </h2>
 
       <video class="m-auto" width="420" height="340" controls>
         <source src="movie.mp4" type="video/mp4" />
@@ -106,7 +110,9 @@ const t = useTranslations(lang);
          Your browser does not support the video tag.
       </video>
 
-      <div class="text-center grid grid-flow-col grid justify-center gap-10">
+      <div
+        class="text-center grid grid-flow-row md:grid-flow-col justify-center"
+      >
         <Button variant="primary">Join our Community</Button>
         <Button variant="accent">Explore the Library</Button>
       </div>

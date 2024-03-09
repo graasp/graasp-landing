@@ -1,13 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import SplashSection from "../components/SplashSection.astro";
-import PlatformButton from "../components/Home/PlatformButton.astro";
+import PlatformPuzzleSection from "../components/Home/PlatformPuzzleSection.astro";
 import Button from "../components/Button.astro";
 import TestimoniesSection from "../components/Home/TestimoniesSection.astro";
 import SubscribeSection from "../components/SubscribeSection.astro";
 import OurMissionSection from "../components/Home/OurMissionSection.astro";
 import UserStorySection from "../components/Home/UserStorySection.astro";
-import BuilderPuzzle from "../components/Home/BuilderPuzzle.astro";
 import { useTranslations, type UILanguages } from "../i18n/utils";
 
 type Props = {
@@ -18,105 +17,21 @@ const t = useTranslations(lang);
 ---
 
 <Layout title="Graasp" description={t("meta.description")} {lang}>
-  <main>
+  <main class="flex flex-col gap-24">
     <SplashSection />
-    <section>
-      <div class="grid grid-flow-row lg:grid-cols-6 gap-10 my-20">
-        <div class="lg:order-1 lg:col-span-4 text-center mx-10">
-          <h2>{t("An all-in-one tool, how?")}</h2>
-          <BuilderPuzzle />
-        </div>
-        <div class="grid lg:order-0 max-lg:grid-cols-2 lg:grid-flow-row gap-4">
-          <PlatformButton
-            href=""
-            caption={t("Use the")}
-            name="Builder"
-            color="builder"
-            buttonText={t("Create")}
-            description={t("To create rich and interactive material")}
-          />
-          <PlatformButton
-            href=""
-            caption={t("Use the")}
-            name="Player"
-            color="player"
-            buttonText={t("Experience")}
-            description={t("And let learners access material in a new way")}
-          />
-        </div>
-        <div class="grid lg:order-2 max-lg:grid-cols-2 lg:grid-flow-row gap-4">
-          <PlatformButton
-            href=""
-            caption={t("Access the")}
-            name="Analytics"
-            direction="right"
-            color="analytics"
-            buttonText={t("Analyze")}
-            description={t("To collect insights and data about your class")}
-          />
-          <PlatformButton
-            href=""
-            caption={t("Navigate the")}
-            name="Library"
-            direction="right"
-            color="library"
-            buttonText={t("Explore")}
-            description={t("To find resources and be part of a community")}
-          />
-        </div>
+    <PlatformPuzzleSection />
+
+    <!-- This section is not shown on mobile -->
+    <section class="hidden lg:flex flex-col w-full max-w-5xl self-center grow">
+      <div class="flex flex-row items-center justify-evenly grow">
+        <Button href="">
+          {t("Are you a teacher?")}
+        </Button>
+        <Button href="">{t("Are you a researcher?")}</Button>
       </div>
     </section>
 
-    <div class="text-center">
-      <Button href="">
-        {t("Are you a teacher?")}
-      </Button>
-      <Button href="">{t("Are you a researcher?")}</Button>
-    </div>
-
-    <section>
-      <UserStorySection
-        href=""
-        caption={t(
-          "Are you a teacher wanting to enhance your content creation?",
-        )}
-        buttonText={t("Start Today")}
-        title={t("Build your material with Graasp, a structured way to…")}
-      >
-        <p>
-          {t("Embed interactive apps in your class material")}
-        </p>
-        <p>
-          {t("Connect with a wide community of educators")}
-        </p>
-        <p>
-          {t("Explore detailed analytics about your students")}
-        </p>
-      </UserStorySection>
-      <UserStorySection
-        direction="right"
-        href=""
-        caption={t(
-          "Are you a researcher seeking a platform that seamlessly integrates data collection and interactive experiences?",
-        )}
-        buttonText={t("Register Now")}
-        title={t("Start using Graasp for your research")}
-      >
-        <p>
-          {
-            t(
-              "Access a secure and controlled environment for conducting experiments",
-            )
-          }
-        </p>
-        <p>
-          {t("Conduct tests with several different options")}
-        </p>
-        <p>
-          {t("Join a lively community focused on advancing digital education")}
-        </p>
-      </UserStorySection>
-    </section>
+    <UserStorySection />
 
     <OurMissionSection />
 

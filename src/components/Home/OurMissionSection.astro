@@ -6,15 +6,21 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<section class="bg-white p-10 text-center">
-  <h2>{t("Our Mission")}</h2>
+<section class="flex flex-col items-center">
+  <div
+    class="flex flex-col max-w-[50ch] rounded-[50px] bg-white p-10 gap-5 shadow items-center"
+  >
+    <h2 class="font-bold">{t("Our Mission")}</h2>
 
-  <p>
-    We aim at empowering educators to become the best professionals they can be,
-    through technology and revolutionizing their teaching and learning
-    experiences in a <strong>wide learning community</strong>!
-  </p>
-  <p>Do you want to know more?</p>
-
-  <Button href="">Get to Know Us</Button>
+    <p>
+      We aim at empowering educators to become the best professionals they can
+      be, through technology and revolutionizing their teaching and learning
+      experiences in a <strong>wide learning community</strong>!
+    </p>
+    <div class="flex flex-col gap-2">
+      <p>Do you want to know more?</p>
+      <!-- TODO: add a link here -->
+      <Button href="">Get to Know Us</Button>
+    </div>
+  </div>
 </section>

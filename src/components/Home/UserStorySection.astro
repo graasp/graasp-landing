@@ -1,47 +1,49 @@
 ---
 import { useTranslations, getLangFromUrl } from "../../i18n/utils";
-
-import Button from "../Button.astro";
+import UserStory from "./UserStory.astro";
 const lang = getLangFromUrl(Astro.url);
 
-interface Props {
-  caption: string;
-  title: string;
-  href: string;
-  buttonText: string;
-  direction?: "left" | "right";
-}
-const { title, caption, direction = "left", href, buttonText } = Astro.props;
+const t = useTranslations(lang);
 ---
 
-<div
-  class:list={[
-    "flex",
-    "gap-10",
-    "my-4",
-    direction === "left" ? "md:flex-row-reverse" : "md:flex-row",
-    "flex-col-reverse",
-  ]}
->
-  <div class="grow">
-    <div
-      class:list={[
-        "text-left",
-        direction === "left" ? "md:text-right" : "md:text-left",
-      ]}
-    >
-      <p>
-        {caption}
-      </p>
-      <h2>
-        {title}
-      </h2>
-
-      <slot />
-      <Button {href}>{buttonText}</Button>
-    </div>
-  </div>
-  <div>
-    <img class="m-auto rounded-3xl" src="https://picsum.photos/200/200" />
-  </div>
-</div>
+<section>
+  <UserStory
+    href=""
+    caption={t("Are you a teacher wanting to enhance your content creation?")}
+    buttonText={t("Start Today")}
+    title={t("Build your material with Graasp, a structured way to…")}
+  >
+    <p>
+      {t("Embed interactive apps in your class material")}
+    </p>
+    <p>
+      {t("Connect with a wide community of educators")}
+    </p>
+    <p>
+      {t("Explore detailed analytics about your students")}
+    </p>
+  </UserStory>
+  <UserStory
+    direction="right"
+    href=""
+    caption={t(
+      "Are you a researcher seeking a platform that seamlessly integrates data collection and interactive experiences?",
+    )}
+    buttonText={t("Register Now")}
+    title={t("Start using Graasp for your research")}
+  >
+    <p>
+      {
+        t(
+          "Access a secure and controlled environment for conducting experiments",
+        )
+      }
+    </p>
+    <p>
+      {t("Conduct tests with several different options")}
+    </p>
+    <p>
+      {t("Join a lively community focused on advancing digital education")}
+    </p>
+  </UserStory>
+</section>

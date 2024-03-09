@@ -185,19 +185,23 @@ const t = useTranslations(lang);
 -->
 
   <section>
-    <div class="grid grid-rows-1 grid-flow-col gap-6">
-      <div>
+    <div class="grid grid-flow-row lg:grid-flow-col gap-6">
+      <div class="m-auto">
         <img class="rounded-3xl" src="https://picsum.photos/400/200" />
       </div>
-      <div>
-        <p class="text-right">{t("Graasp is constantly growing!")}</p>
-        <h2 class="text-right">
+      <div class="text-center lg:text-right">
+        <p>
+          {t("Graasp is constantly growing!")}
+        </p>
+        <h2>
           {t("Visit our blog to discover all the latest updates!")}
         </h2>
-        <p class="text-right">
+        <p>
           {t("Discover updates, enrich your Graasp experience")}
           <br />
-          <Button href="">{t("Visit our Blog")}</Button>
+          <div>
+            <Button href="">{t("Visit our Blog")}</Button>
+          </div>
         </p>
       </div>
     </div>

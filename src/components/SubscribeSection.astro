@@ -15,7 +15,7 @@ const t = useTranslations(lang);
       <p>{t("Do you wanna be updated?")}</p>
       <h3>{t("Subscribe to our newsletter!")}</h3>
     </div>
-    <div>
+    <div class="flex flex-col gap-2">
       <div class="grid grid-flow-row gap-1">
         <Input
           name="email"
@@ -23,7 +23,6 @@ const t = useTranslations(lang);
           placeholder={t("Write your email address")}
         />
       </div>
-
       <Button href="">{t("Subscribe")}</Button>
     </div>
   </div>
