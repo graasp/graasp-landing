@@ -14,6 +14,6 @@ Durch die Nutzung der Graasp-Plattform und ihrer Software:
 4. Akzeptieren Sie, dass die Graasp Association und die École Polytechnique Fédérale de Lausanne (EPFL) nicht für Schäden haftbar gemacht werden können, die sich aus Ihrer Nutzung von Graasp ergeben, einschließlich etwaiger Verluste von Inhalten und Daten
 5. Akzeptieren Sie, dass Ihnen der Zugriff auf Graasp „wie besehen“ bereitgestellt wird, ohne jegliche Gewährleistung, einschließlich der ordnungsgemäßen Funktion und Eignung für einen bestimmten Zweck.
 
-Diese Nutzungsbedingungen unterliegen den Gesetzen der Schweiz. Der Gerichtsstand für alle Streitigkeiten ist Wallis (VS), Schweiz. Bitte beachten Sie auch den [rechtlichen Haftungsausschluss von Graasp](./disclaimer) und den [Haftungsausschluss der EPFL-Websites](https://www.epfl.ch/about/overview/regulations-and-guidelines/disclaimer/) .
+Diese Nutzungsbedingungen unterliegen den Gesetzen der Schweiz. Der Gerichtsstand für alle Streitigkeiten ist Wallis (VS), Schweiz. Bitte beachten Sie auch den [rechtlichen Haftungsausschluss von Graasp](/disclaimer) und den [Haftungsausschluss der EPFL-Websites](https://www.epfl.ch/about/overview/regulations-and-guidelines/disclaimer/) .
 
 [← Startseite](./)
