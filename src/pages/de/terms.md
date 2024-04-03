@@ -16,4 +16,4 @@ Durch die Nutzung der Graasp-Plattform und ihrer Software:
 
 Diese Nutzungsbedingungen unterliegen den Gesetzen der Schweiz. Der Gerichtsstand für alle Streitigkeiten ist Wallis (VS), Schweiz. Bitte beachten Sie auch den [rechtlichen Haftungsausschluss von Graasp](../disclaimer) und den [Haftungsausschluss der EPFL-Websites](https://www.epfl.ch/about/overview/regulations-and-guidelines/disclaimer/) .
 
-[← Startseite](./)
+[← Startseite](../)
