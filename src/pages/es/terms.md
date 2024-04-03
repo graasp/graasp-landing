@@ -14,6 +14,6 @@ Al utilizar la plataforma Graasp y su software, usted:
 4. Acepta que la Asociación Graasp y la École Polytechnique Fédérale de Lausanne (EPFL) no se hacen responsables de ningún daño resultante del uso de Graasp, incluida cualquier pérdida de contenido y datos, y
 5. Acepte que el acceso a Graasp se le proporciona "tal cual", sin ninguna garantía, incluso en cuanto a su correcto funcionamiento e idoneidad para un propósito particular.
 
-Estos Términos de servicio se rigen por las leyes de Suiza. La jurisdicción legal para cualquier disputa será Valais (VS), Suiza. Consulte también el [Aviso legal de Graasp](/disclaimer) y el [Aviso legal de los sitios web de EPFL](https://www.epfl.ch/about/overview/regulations-and-guidelines/disclaimer/) .
+Estos Términos de servicio se rigen por las leyes de Suiza. La jurisdicción legal para cualquier disputa será Valais (VS), Suiza. Consulte también el [Aviso legal de Graasp](../disclaimer) y el [Aviso legal de los sitios web de EPFL](https://www.epfl.ch/about/overview/regulations-and-guidelines/disclaimer/) .
 
 [← Inicio](./)
