@@ -16,4 +16,4 @@ By using the Graasp platform and its software, you:
 
 These Terms of Service are governed by the laws of Switzerland. The legal jurisdiction for any dispute shall be Valais (VS), Switzerland. Please also refer to the [Graasp Legal Disclaimer](/disclaimer) and the [EPFL websites disclaimer](https://www.epfl.ch/about/overview/regulations-and-guidelines/disclaimer/).
 
-[&larr; Home](./)
+[&larr; Home](../)
