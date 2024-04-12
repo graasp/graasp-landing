@@ -43,7 +43,7 @@ Graasp agrees and warrants to provide the services according to the [Terms of Us
 
 ### 3.1 Manage your account
 
-Graasp processes your Account Data (see [Section 4.1](#41-account-data)) for the purposes of operating the Graasp platform and software, providing the Graasp services, and communicating with you about Graasp. The legal basis for the Account Data processing is the contract between users and Graasp as stated in the [Terms of Use](./terms).
+Graasp processes your Account Data (see [Section 4.1](#41-account-data)) for the purposes of operating the Graasp platform and software, providing the Graasp services, and communicating with you about Graasp. The legal basis for the Account Data processing is the contract between users and Graasp as stated in the [Terms of Use](../terms).
 
 ### 3.2 Provide our services
 
