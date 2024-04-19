@@ -1,0 +1,36 @@
+---
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+interface Props {}
+const {} = Astro.props;
+---
+
+<table>
+  <tr>
+    <th></th>
+    <th>{t("Standard")}</th>
+    <th>{t("Premium")}</th>
+  </tr>
+  <tr>
+    <th scope="row">Storage</th>
+    <td>15 GB</td>
+    <td>50 GB</td>
+  </tr>
+  <tr>
+    <th scope="row">Support</th>
+    <td>Free Tutorials</td>
+    <td>Personalised support</td>
+  </tr>
+  <tr>
+    <th scope="row">Templates</th>
+    <td>Standard pack</td>
+    <td>Complete pack</td>
+  </tr>
+  <tr>
+    <th scope="row">Price</th>
+    <td>Free</td>
+    <td>5 CHF/year</td>
+  </tr>
+</table>

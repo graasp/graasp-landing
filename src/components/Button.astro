@@ -1,0 +1,33 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+type Props = {
+  size?: "big" | "small";
+  href: string;
+  fullWidth?: boolean;
+  variant?: "primary" | "accent" | "secondary" | "neutral";
+  color?: string;
+};
+const {
+  size = "small",
+  href,
+  fullWidth,
+  variant = "primary",
+  color = "",
+} = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<a
+  {href}
+  class:list={[
+    "btn",
+    variant === "primary" ? "btn-primary text-white" : "",
+    variant === "accent" ? "btn-accent" : "",
+    fullWidth ? "w-full" : "w-max",
+    size === "small" ? "btn-sm" : "",
+    color,
+  ]}
+>
+  <slot />
+</a>

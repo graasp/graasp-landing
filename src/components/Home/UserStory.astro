@@ -1,0 +1,47 @@
+---
+import { useTranslations, getLangFromUrl } from "../../i18n/utils";
+
+import Button from "../Button.astro";
+const lang = getLangFromUrl(Astro.url);
+
+interface Props {
+  caption: string;
+  title: string;
+  href: string;
+  buttonText: string;
+  direction?: "left" | "right";
+}
+const { title, caption, direction = "left", href, buttonText } = Astro.props;
+---
+
+<div
+  class:list={[
+    "flex",
+    "gap-10",
+    "my-4",
+    direction === "left" ? "md:flex-row-reverse" : "md:flex-row",
+    "flex-col-reverse",
+  ]}
+>
+  <div class="grow">
+    <div
+      class:list={[
+        "text-left",
+        direction === "left" ? "md:text-right" : "md:text-left",
+      ]}
+    >
+      <p>
+        {caption}
+      </p>
+      <h2>
+        {title}
+      </h2>
+
+      <slot />
+      <Button {href}>{buttonText}</Button>
+    </div>
+  </div>
+  <div>
+    <img class="m-auto rounded-3xl" src="https://picsum.photos/200/200" />
+  </div>
+</div>

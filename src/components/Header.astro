@@ -1,0 +1,88 @@
+---
+import SignUp from "../components/SignUp.astro";
+import SignIn from "../components/SignIn.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import { Icon } from "astro-icon/components";
+import LanguageSelector from "./LanguageSelector.astro";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<header>
+  <div class="drawer drawer-end">
+    <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+
+    <div
+      class="w-full navbar flex flex-row items-center justify-between px-2 sm:px-8"
+    >
+      <div class="flex flex-row items-center gap-16">
+        <a
+          class="flex flex-row items-center gap-2"
+          href={getRelativeLocaleUrl(lang, "/")}
+        >
+          <Icon name="graasp" color="oklch(var(--p))" font-size="38px" />
+          <span class="font-extrabold text-xl"> Graasp</span>
+        </a>
+
+        <!-- This is shown only on screens larger than lg -->
+        <div class="gap-5 hidden lg:flex flex-row">
+          <a href={getRelativeLocaleUrl(lang, "/")}>{t("Home")}</a>
+          <a href={getRelativeLocaleUrl(lang, "/features")}>{t("Features")}</a>
+          <a href={getRelativeLocaleUrl(lang, "/about")}>{t("About Us")}</a>
+          <a href={getRelativeLocaleUrl(lang, "/support")}>{t("Support")}</a>
+          <a href={getRelativeLocaleUrl(lang, "/contact")}>{t("Contact Us")}</a>
+        </div>
+      </div>
+
+      <div class="flex flex-row gap-4 items-center hidden lg:block">
+        <SignIn />
+        <SignUp />
+        <LanguageSelector />
+      </div>
+
+      <div class="flex-row gap-2 lg:hidden">
+        <LanguageSelector />
+        <label
+          for="my-drawer-3"
+          aria-label="open sidebar"
+          class="btn btn-square btn-ghost"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            class="inline-block w-6 h-6 stroke-current"
+            ><path
+              stroke-Linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path></svg
+          >
+        </label>
+      </div>
+    </div>
+
+    <div class="drawer-side">
+      <label for="my-drawer-3" aria-label="close sidebar" class="drawer-overlay"
+      ></label>
+      <ul class="menu p-4 w-80 min-h-full bg-white gap-2">
+        <li><a href={getRelativeLocaleUrl(lang, "/")}>{t("Home")}</a></li>
+        <li>
+          <a href={getRelativeLocaleUrl(lang, "/features")}>{t("Features")}</a>
+        </li>
+        <li>
+          <a href={getRelativeLocaleUrl(lang, "/about")}>{t("About Us")}</a>
+        </li>
+        <li>
+          <a href={getRelativeLocaleUrl(lang, "/support")}>{t("Support")}</a>
+        </li>
+        <li>
+          <a href={getRelativeLocaleUrl(lang, "/contact")}>{t("Contact Us")}</a>
+        </li>
+        <li><SignIn /></li>
+        <li><SignUp /></li>
+      </ul>
+    </div>
+  </div>
+</header>

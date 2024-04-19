@@ -1,0 +1,49 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SplashSection from "../components/SplashSection.astro";
+import PlatformPuzzleSection from "../components/Home/PlatformPuzzleSection.astro";
+import Button from "../components/Button.astro";
+import TestimoniesSection from "../components/Home/TestimoniesSection.astro";
+import SubscribeSection from "../components/SubscribeSection.astro";
+import OurMissionSection from "../components/Home/OurMissionSection.astro";
+import UserStorySection from "../components/Home/UserStorySection.astro";
+import { useTranslations, type UILanguages } from "../i18n/utils";
+
+type Props = {
+  lang: UILanguages;
+};
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+---
+
+<Layout title="Graasp" description={t("meta.description")} {lang}>
+  <main class="flex flex-col gap-24">
+    <SplashSection />
+    <PlatformPuzzleSection />
+
+    <!-- This section is not shown on mobile -->
+    <section class="hidden lg:flex flex-col w-full max-w-5xl self-center grow">
+      <div class="flex flex-row items-center justify-evenly grow">
+        <Button href="">
+          {t("Are you a teacher?")}
+        </Button>
+        <Button href="">{t("Are you a researcher?")}</Button>
+      </div>
+    </section>
+
+    <UserStorySection />
+
+    <OurMissionSection />
+
+    <TestimoniesSection />
+
+    <SubscribeSection />
+  </main>
+</Layout>
+
+<style>
+  main {
+    @apply grow text-black;
+    @apply bg-background;
+  }
+</style>

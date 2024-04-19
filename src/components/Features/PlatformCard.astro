@@ -1,0 +1,30 @@
+---
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import Button from "../Button.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+interface Props {
+  name: string;
+  description: string;
+  href: string;
+}
+const { name, description, href } = Astro.props;
+---
+
+<div class="flex text-center flex-row lg:flex-col gap-4">
+  <img class="m-auto rounded-3xl" src="https://picsum.photos/200/150" />
+  <div class="text-left lg:text-center">
+    <h4 class="uppercase">{name}</h4>
+    <p>{description}</p>
+
+    <Button
+      variant="accent"
+      {href}
+      class:list={["btn btn-primary text-white "]}
+    >
+      {t("Read More")}
+    </Button>
+  </div>
+</div>
