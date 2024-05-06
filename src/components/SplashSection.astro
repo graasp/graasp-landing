@@ -3,6 +3,7 @@ import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import SignUp from "./SignUp.astro";
 import NegativeHandLogo from "./NegativeHandLogo.astro";
 import Icon from "astro-icon";
+import LibraryButton from "./LibraryButton.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -28,7 +29,11 @@ const t = useTranslations(lang);
         <h3 class="text-2xl">
           {t("splash.subtitle")}
         </h3>
-        <span><SignUp size="big" /></span>
+
+        <div class="flex flex-row gap-4">
+          <SignUp size="big" />
+          <LibraryButton size="big" />
+        </div>
       </div>
     </div>
   </div>

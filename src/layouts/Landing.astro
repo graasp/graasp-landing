@@ -5,6 +5,7 @@ import Platform from "../components/Platform.astro";
 import { useTranslations, type UILanguages } from "../i18n/utils";
 import Icon from "astro-icon";
 import SignUp from "../components/SignUp.astro";
+import LibraryButton from "../components/LibraryButton.astro";
 type Props = {
   lang: UILanguages;
 };
@@ -65,6 +66,8 @@ const t = useTranslations(lang);
     <div class="p-5 md:p-20 flex flex-col items-center gap-5 justify-center">
       <p class="text-2xl">{t("footer.actionCall")}</p>
       <SignUp size="big" />
+      <p class="text-xl">{t("footer.libraryDiscover")}</p>
+      <LibraryButton size="big" />
     </div>
   </main>
 </Layout>

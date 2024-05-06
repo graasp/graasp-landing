@@ -1,0 +1,21 @@
+---
+import Icon from "astro-icon";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+type Props = {
+  size?: "big" | "small";
+};
+const { size = "small" } = Astro.props;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<a
+  href="https://library.graasp.org"
+  class:list={[
+    "btn bg-library hover:bg-purple-800 text-white",
+    size === "small" ? "btn-sm" : "btn-lg text-xl",
+  ]}
+>
+  <Icon name="library-white" size="40" color="white" />
+  {t("action.libraryDiscover")}
+</a>
